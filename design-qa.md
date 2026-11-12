@@ -48,3 +48,10 @@ final result: passed
 - Browser evidence: `../../outputs/ghostform-sports-images/sports-section-preview.jpg` (complete desktop section), `desktop-preview.jpg` and `mobile-preview.jpg`. Six images loaded at 1440px; no horizontal overflow at 390px or 320px. Actual dance and tennis links reached #delay and #compare. No browser warning/error entries were observed.
 - The existing hero, product screenshots, ownership tag, privacy/support pages and Japanese App Store campaign destinations were preserved. The previous selected mock remains the visual reference for the overall page; the sport section's photo layout is the user's subsequent requested change.
 - Physical phone operation and acquisition/conversion uplift remain unverified. No actionable layout or interaction findings remain from this focused check.
+## 2026-11-13: first viewport and image delivery
+
+- Kept the selected athlete, cyan/orange palette, oversized lettering, and foreground text hiding the legs.
+- At 1440×900 and 1280×800, the Japanese product description and full primary download button are visible without scrolling. Primary button bottom: 832px and 725px respectively.
+- Checked 390×844 and 320×740 as well; no horizontal page overflow. The existing mobile layout stays intact.
+- JPEG quality 90 preserves the 1536×1024 composition: 171,500 bytes versus the previous PNG's 1,739,330 bytes (90.1% fewer image bytes). This is a byte reduction, not a measured real-network speed claim. The original PNG remains for recovery.
+- Screenshots and profile-link verification are stored outside the public repository in `outputs/ghostform-growth-execution/`.

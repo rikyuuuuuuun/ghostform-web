@@ -62,3 +62,17 @@ h2{font-size:clamp(28px,5vw,65px)}
 @media(max-width:1100px){.sports-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 26px}.sports-list h3 span{font-size:38px}}
 @media(max-width:650px){.sports-list{grid-template-columns:minmax(0,1fr);gap:34px;margin-top:30px}.sport-heading{gap:13px;padding-top:17px}.sports-list h3{gap:17px}.sports-list h3 span{font-size:38px}.sports-list h3 small{font-size:12px}.sports-list article p{font-size:13px;margin-top:12px}.sport-action{font-size:11px}.sports-note{margin-top:40px}}
 @media(prefers-reduced-motion:reduce){.sports-list article>a img.sport-photo,.sports-list article>a img.sport-arrow{transition:none}.sports-list article>a:hover img.sport-arrow{transform:none}}
+
+/* Keep the product promise and download action in the first desktop viewport. */
+@media(min-width:761px){
+ .hero-stage{height:clamp(340px,calc(100svh - 370px),650px);container-type:size}
+ .hero-title .see{top:1%;font-size:min(32vw,55cqh);transform:scaleX(.78)}
+ .hero-title .difference{font-size:min(41vw,68cqh);transform:scaleX(.8)}
+ .hero-art{top:0;left:-7%;width:112%;height:100%;object-position:70% 0}
+ .hero-bottom{padding-top:16px}
+ .hero-jp{font-size:clamp(32px,3.2vw,46px);margin-bottom:6px}
+ .hero-description{font-size:16px;margin-bottom:18px}
+ .button-hero{font-size:18px;min-height:62px;padding:15px 34px;gap:32px}
+ .hero-bottom>.fine{margin-top:10px;margin-bottom:0}
+ .hero-foot{margin-top:10px;padding-bottom:12px}
+}
