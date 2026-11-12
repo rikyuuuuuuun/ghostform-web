@@ -8,7 +8,7 @@ This is a buildless GitHub Pages website. Publishing uses the existing `main` br
 
 - `index.html`: product introduction, use cases, first-use instructions, download links, canonical URL and Search Console verification.
 - `support.html` and `privacy.html`: existing support/privacy URLs, retained for the app listing.
-- `store-links.js`: Apple-issued campaign links. `?from=x`, `instagram`, `tiktok`, `note`, or `coach` selects a source. Unknown values use the website campaign.
+- `store-links.js`: Apple-issued campaign tokens on the explicit Japanese product URL. `?from=x`, `instagram`, `tiktok`, `note`, or `coach` selects a source. Unknown values use the website campaign. Regionless `/app/apple-store/` links reproduced a US not-found page; retain `/jp/app/` in JS, HTML fallbacks and support links.
 - `site.js`: presentation motion pause and two real product-screenshot choices. All content and download fallbacks remain accessible without JavaScript.
 - `sitemap.xml`: homepage and support page.
 - `assets/`: original official icon and current App Store marketing screenshots, obtained from the product's public catalog response. The 600px copies are web assets, not store-submission originals.
@@ -18,7 +18,7 @@ This is a buildless GitHub Pages website. Publishing uses the existing `main` br
 
 ## Preview and publish
 
-From this directory run `python -m http.server 8891 --bind 127.0.0.1`, then open the printed local URL. Check desktop and mobile widths, images, FAQ expansion, anchors and the App Store destination. Preserve the no-JavaScript fallback download links when changing campaign settings.
+From this directory run `python -m http.server 8891 --bind 127.0.0.1`, then open the printed local URL. Check desktop and mobile widths, images, FAQ expansion, anchors and the App Store destination. For download changes, actually follow a default and a source-specific button and verify the Ghostform listing title and Japanese storefront; checking hrefs or only a 200 response is insufficient. Preserve the no-JavaScript fallback download links when changing campaign settings. Changing the storefront path must not change the issued campaign/provider tokens; actual attribution still requires Apple reporting.
 
 Inspect and commit only the intended files, then push `main`. Wait for the matching Pages deployment to succeed. Verify the actual public URL and its links after deployment; a successful push alone is not publication verification.
 
