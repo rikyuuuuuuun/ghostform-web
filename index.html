@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preload" href="assets/display.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/athlete-hero.png" as="image">
-  <link rel="stylesheet" href="styles.css?v=20261113-3">
+  <link rel="stylesheet" href="styles.css?v=20261113-5">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Ghostform（ゴーストフォーム）","applicationCategory":"SportsApplication","operatingSystem":"iOS 16.0以降","url":"https://rikyuuuuuuun.github.io/ghostform-web/","installUrl":"https://apps.apple.com/jp/app/id6831656347","image":"https://rikyuuuuuuun.github.io/ghostform-web/assets/app-icon.jpg","description":"動画を重ねるフォーム比較とディレイ再生。ゴルフ・野球・体操・ダンスなどの練習を振り返るiPhoneアプリ。","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY","description":"無料ダウンロード。広告・アプリ内購入あり。"}}</script>
 </head>
 <body>
@@ -70,10 +70,48 @@
     <section id="sports" class="section sports-section"><div class="wrap">
       <p class="eyebrow cyan">DIFFERENT SPORTS. SAME CURIOSITY.</p><div class="sports-intro"><h2>競技は変わっても、<br>見返したい瞬間がある。</h2><p>ゴルフ、野球、体操、ダンス、テニス、サッカー。<br>お手本との比較にも、自分の前回と今回にも。</p></div>
       <div class="sports-list">
-        <article id="golf"><span class="sport-no">01</span><h3><span lang="en">GOLF</span><small>ゴルフ</small></h3><p>アドレスやインパクト。<br>頭の位置や前傾を、同じ局面で見比べる。</p><a href="#compare" aria-label="ゴルフの動画比較を見る"><img src="assets/arrow-up-right.svg" alt="" width="26" height="26"></a></article>
-        <article id="baseball"><span class="sport-no">02</span><h3><span lang="en">BASEBALL</span><small>野球</small></h3><p>投球も、バッティングも。<br>踏み出しと上半身の位置を重ねて確認。</p><a href="#compare" aria-label="野球の動画比較を見る"><img src="assets/arrow-up-right.svg" alt="" width="26" height="26"></a></article>
-        <article id="gymnastics"><span class="sport-no">03</span><h3><span lang="en">GYMNASTICS</span><small>体操</small></h3><p>倒立や技の途中で止めて。<br>前回と今回の体のラインを、1コマずつ。</p><a href="#how-to" aria-label="体操の比較の始め方を見る"><img src="assets/arrow-up-right.svg" alt="" width="26" height="26"></a></article>
-        <article id="dance"><span class="sport-no">04</span><h3><span lang="en">DANCE</span><small>ダンス</small></h3><p>踊った直後の動きをディレイ再生。<br>ポーズやタイミングをその場で振り返る。</p><a href="#delay" aria-label="ダンスのディレイ再生を見る"><img src="assets/arrow-up-right.svg" alt="" width="26" height="26"></a></article>
+        <article id="golf">
+          <a class="sport-link" href="#compare" aria-label="ゴルフの動画比較を見る">
+            <span class="sport-visual"><img class="sport-photo" src="assets/sports/golf.jpg" srcset="assets/sports/golf-480.jpg 480w, assets/sports/golf.jpg 960w" sizes="(max-width:650px) calc(100vw - 40px), (max-width:1100px) calc((100vw - 100px) / 2), 420px" alt="インパクト付近のゴルフスイングをする選手" width="960" height="640" loading="lazy" decoding="async"></span>
+            <div class="sport-heading"><span class="sport-no">01</span><h3><span lang="en">GOLF</span><small>ゴルフ</small></h3><img class="sport-arrow" src="assets/arrow-up-right.svg" alt="" width="22" height="22"></div>
+            <p>アドレスやインパクト。<br>頭の位置や前傾を、同じ局面で見比べる。</p><span class="sport-action">インパクトを比べる</span>
+          </a>
+        </article>
+        <article id="baseball">
+          <a class="sport-link" href="#compare" aria-label="野球の動画比較を見る">
+            <span class="sport-visual"><img class="sport-photo" src="assets/sports/baseball.jpg" srcset="assets/sports/baseball-480.jpg 480w, assets/sports/baseball.jpg 960w" sizes="(max-width:650px) calc(100vw - 40px), (max-width:1100px) calc((100vw - 100px) / 2), 420px" alt="バッティングのインパクト付近の選手" width="960" height="640" loading="lazy" decoding="async"></span>
+            <div class="sport-heading"><span class="sport-no">02</span><h3><span lang="en">BASEBALL</span><small>野球</small></h3><img class="sport-arrow" src="assets/arrow-up-right.svg" alt="" width="22" height="22"></div>
+            <p>投球も、バッティングも。<br>踏み出しと上半身の位置を重ねて確認。</p><span class="sport-action">スイングを重ねる</span>
+          </a>
+        </article>
+        <article id="gymnastics">
+          <a class="sport-link" href="#how-to" aria-label="体操の比較の始め方を見る">
+            <span class="sport-visual"><img class="sport-photo" src="assets/sports/gymnastics.jpg" srcset="assets/sports/gymnastics-480.jpg 480w, assets/sports/gymnastics.jpg 960w" sizes="(max-width:650px) calc(100vw - 40px), (max-width:1100px) calc((100vw - 100px) / 2), 420px" alt="腕と脚をまっすぐ伸ばして倒立する体操選手" width="960" height="640" loading="lazy" decoding="async"></span>
+            <div class="sport-heading"><span class="sport-no">03</span><h3><span lang="en">GYMNASTICS</span><small>体操</small></h3><img class="sport-arrow" src="assets/arrow-up-right.svg" alt="" width="22" height="22"></div>
+            <p>倒立のラインや、着地の瞬間。<br>前回と今回の姿勢を、1コマずつ振り返る。</p><span class="sport-action">同じ瞬間で止める</span>
+          </a>
+        </article>
+        <article id="dance">
+          <a class="sport-link" href="#delay" aria-label="ダンスのディレイ再生を見る">
+            <span class="sport-visual"><img class="sport-photo" src="assets/sports/dance.jpg" srcset="assets/sports/dance-480.jpg 480w, assets/sports/dance.jpg 960w" sizes="(max-width:650px) calc(100vw - 40px), (max-width:1100px) calc((100vw - 100px) / 2), 420px" alt="スタジオで振り付けを踊るダンサー" width="960" height="640" loading="lazy" decoding="async"></span>
+            <div class="sport-heading"><span class="sport-no">04</span><h3><span lang="en">DANCE</span><small>ダンス</small></h3><img class="sport-arrow" src="assets/arrow-up-right.svg" alt="" width="22" height="22"></div>
+            <p>踊った直後の動きをディレイ再生。<br>ポーズやタイミングをその場で振り返る。</p><span class="sport-action">踊った直後を見返す</span>
+          </a>
+        </article>
+        <article id="tennis">
+          <a class="sport-link" href="#compare" aria-label="テニスの動画比較を見る">
+            <span class="sport-visual"><img class="sport-photo" src="assets/sports/tennis.jpg" srcset="assets/sports/tennis-480.jpg 480w, assets/sports/tennis.jpg 960w" sizes="(max-width:650px) calc(100vw - 40px), (max-width:1100px) calc((100vw - 100px) / 2), 420px" alt="両手でバックハンドを打つテニス選手" width="960" height="640" loading="lazy" decoding="async"></span>
+            <div class="sport-heading"><span class="sport-no">05</span><h3><span lang="en">TENNIS</span><small>テニス</small></h3><img class="sport-arrow" src="assets/arrow-up-right.svg" alt="" width="22" height="22"></div>
+            <p>ストロークの、気になる一瞬。<br>踏み込みやラケットの位置を見比べる。</p><span class="sport-action">ストロークを比べる</span>
+          </a>
+        </article>
+        <article id="soccer">
+          <a class="sport-link" href="#compare" aria-label="サッカーの動画比較を見る">
+            <span class="sport-visual"><img class="sport-photo" src="assets/sports/soccer.jpg" srcset="assets/sports/soccer-480.jpg 480w, assets/sports/soccer.jpg 960w" sizes="(max-width:650px) calc(100vw - 40px), (max-width:1100px) calc((100vw - 100px) / 2), 420px" alt="ボールを蹴るサッカー選手" width="960" height="640" loading="lazy" decoding="async"></span>
+            <div class="sport-heading"><span class="sport-no">06</span><h3><span lang="en">SOCCER</span><small>サッカー</small></h3><img class="sport-arrow" src="assets/arrow-up-right.svg" alt="" width="22" height="22"></div>
+            <p>キックの軸足と、上半身の位置。<br>お手本や前回の動きと重ねて振り返る。</p><span class="sport-action">キックを見比べる</span>
+          </a>
+        </article>
       </div><p class="sports-note">比べるときは、できるだけ同じ撮影方向・同じ局面で。<br>撮影角度が違うと、姿勢や角度の見え方も変わります。</p>
     </div></section>
 

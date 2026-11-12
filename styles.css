@@ -42,3 +42,23 @@ h2{font-size:clamp(28px,5vw,65px)}
 .mobile-label{display:none}.button-small{white-space:nowrap}@media(max-width:760px){.desktop-label{display:none}.mobile-label{display:inline}.hero-index{display:none}.site-header .brand{font-size:16px}.site-header{gap:10px}}
 
 @media(min-width:761px){.compare-section{padding-top:40px}.hero-foot{padding-bottom:18px;margin-top:22px}}
+
+/* Sport photography: a shared campaign palette, with each action kept in frame. */
+.sports-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px 26px;margin-top:44px}
+.sports-list article,.sports-list article:last-child{display:block;padding:0;border:0;min-width:0;scroll-margin-top:32px}
+.sports-list article>a.sport-link{display:block;position:relative;text-decoration:none;min-width:0;min-height:0}
+.sport-visual{display:block;aspect-ratio:3/2;overflow:hidden;background:#071117;border-radius:4px}
+.sports-list article>a img.sport-photo{display:block;width:100%;height:100%;object-fit:contain;filter:none;transform:none;transition:filter .25s}
+.sports-list article>a:hover img.sport-photo{transform:none;filter:brightness(1.12)}
+.sport-heading{display:flex;align-items:center;gap:14px;padding-top:19px}
+.sports-list .sport-no{padding:0;align-self:center;font-size:10px;line-height:1;color:var(--cyan)}
+.sports-list h3{display:flex;align-items:center;gap:14px;min-width:0;margin:0}
+.sports-list h3 span{font-size:36px;line-height:1.1;letter-spacing:.015em}
+.sports-list h3 small{font-size:11px;white-space:nowrap}
+.sports-list article>a img.sport-arrow{width:20px;height:20px;margin-left:auto;flex:none;filter:invert(1);transition:transform .2s}
+.sports-list article>a:hover img.sport-arrow{transform:translate(3px,-3px)}
+.sports-list article p{margin:16px 0 12px;font-size:13px;line-height:1.9;color:#bec8ce}
+.sport-action{display:inline-block;color:var(--cyan);font-size:11px;font-weight:650;letter-spacing:.04em;border-bottom:1px solid #31616a;padding-bottom:4px}
+@media(max-width:1100px){.sports-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 26px}.sports-list h3 span{font-size:38px}}
+@media(max-width:650px){.sports-list{grid-template-columns:minmax(0,1fr);gap:34px;margin-top:30px}.sport-heading{gap:13px;padding-top:17px}.sports-list h3{gap:17px}.sports-list h3 span{font-size:38px}.sports-list h3 small{font-size:12px}.sports-list article p{font-size:13px;margin-top:12px}.sport-action{font-size:11px}.sports-note{margin-top:40px}}
+@media(prefers-reduced-motion:reduce){.sports-list article>a img.sport-photo,.sports-list article>a img.sport-arrow{transition:none}.sports-list article>a:hover img.sport-arrow{transform:none}}

@@ -38,3 +38,13 @@ final result: passed
 - The source's decorative playback bar was replaced with an actual scroll link and optional motion toggle, because the hero is artwork rather than a playable video.
 - P3: generated-image details and type rasterization vary by device. The approved direction is implemented, not a claim of pixel identity or a limit on future design work.
 - Download attribution, index rankings and conversion improvements require subsequent live analytics; visual QA does not establish these outcomes.
+
+## Sport imagery update (2026-11-13)
+
+- User requested sport-specific imagery within the existing design. Added a coherent set for golf, baseball, gymnastics, dance, tennis and soccer. The latter two extend the previously textual six-sport introduction into image links.
+- Built-in ImageGen produced the photographs using the current hero's cyan/orange/near-black palette as the art reference. These illustrate use cases; they are not customer images or analysis results. The gymnastics subject is a straight handstand, with the whole body visible.
+- Desktop layout: three image links per row; tablet: two; phone: one. Images preserve the generated 3:2 frame without cropping, and titles/body text remain real accessible HTML. The whole image-and-text area links to the relevant existing feature section.
+- Asset delivery: 960px and 480px JPEGs with responsive srcset, lazy loading, async decode and explicit width/height. All six 960px files total 452,451 bytes; all six 480px files total 144,627 bytes.
+- Browser evidence: `../../outputs/ghostform-sports-images/sports-section-preview.jpg` (complete desktop section), `desktop-preview.jpg` and `mobile-preview.jpg`. Six images loaded at 1440px; no horizontal overflow at 390px or 320px. Actual dance and tennis links reached #delay and #compare. No browser warning/error entries were observed.
+- The existing hero, product screenshots, ownership tag, privacy/support pages and Japanese App Store campaign destinations were preserved. The previous selected mock remains the visual reference for the overall page; the sport section's photo layout is the user's subsequent requested change.
+- Physical phone operation and acquisition/conversion uplift remain unverified. No actionable layout or interaction findings remain from this focused check.

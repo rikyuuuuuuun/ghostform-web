@@ -13,6 +13,7 @@ This is a buildless GitHub Pages website. Publishing uses the existing `main` br
 - `sitemap.xml`: homepage and support page.
 - `assets/`: original official icon and current App Store marketing screenshots, obtained from the product's public catalog response. The 600px copies are web assets, not store-submission originals.
 - `assets/athlete-hero.png`: AI-generated promotional artwork, not an inference result or app screenshot. The athlete is deliberately independent of a particular sport. Keep the artwork behind the headline and clipped inside `.hero-stage` so feet never cover the Japanese heading.
+- `assets/sports/`: six AI-generated sport-specific campaign photographs (golf, baseball, gymnastics handstand, dance, tennis and soccer). Each has 960px/480px JPEG versions, uncropped at 3:2, responsive `srcset`, descriptive alt text and lazy loading. The originals and prompts are retained outside this public repo in `../../outputs/ghostform-sports-images/`. These are illustrations of use cases, not customer photographs or pose-estimation results.
 - `assets/display.woff2` and `headings-ja.woff2`: self-hosted subsets of Barlow Condensed ExtraBold Italic and Noto Sans JP Black (Google Fonts; accompanying OFL licenses). UI text uses the system sans-serif. Decorative icons are unmodified Bootstrap Icons 1.13.1 (MIT; license included).
 - `design-qa.md`: design comparison and browser validation record. Its evidence paths refer to local deliverables outside the public repository.
 
