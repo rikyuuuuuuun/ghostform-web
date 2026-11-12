@@ -9,8 +9,12 @@ This is a buildless GitHub Pages website. Publishing uses the existing `main` br
 - `index.html`: product introduction, use cases, first-use instructions, download links, canonical URL and Search Console verification.
 - `support.html` and `privacy.html`: existing support/privacy URLs, retained for the app listing.
 - `store-links.js`: Apple-issued campaign links. `?from=x`, `instagram`, `tiktok`, `note`, or `coach` selects a source. Unknown values use the website campaign.
+- `site.js`: presentation motion pause and two real product-screenshot choices. All content and download fallbacks remain accessible without JavaScript.
 - `sitemap.xml`: homepage and support page.
 - `assets/`: original official icon and current App Store marketing screenshots, obtained from the product's public catalog response. The 600px copies are web assets, not store-submission originals.
+- `assets/athlete-hero.png`: AI-generated promotional artwork, not an inference result or app screenshot. The athlete is deliberately independent of a particular sport. Keep the artwork behind the headline and clipped inside `.hero-stage` so feet never cover the Japanese heading.
+- `assets/display.woff2` and `headings-ja.woff2`: self-hosted subsets of Barlow Condensed ExtraBold Italic and Noto Sans JP Black (Google Fonts; accompanying OFL licenses). UI text uses the system sans-serif. Decorative icons are unmodified Bootstrap Icons 1.13.1 (MIT; license included).
+- `design-qa.md`: design comparison and browser validation record. Its evidence paths refer to local deliverables outside the public repository.
 
 ## Preview and publish
 
