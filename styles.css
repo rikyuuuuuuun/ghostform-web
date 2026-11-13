@@ -102,3 +102,102 @@ h2{font-size:clamp(28px,5vw,65px)}
 @media(max-width:760px){.feature-story{grid-template-columns:minmax(0,1fr);gap:26px}.feature-story .feature-copy{grid-column:1;grid-row:1;align-self:start}.feature-story .feature-film{grid-column:1;grid-row:2}.feature-extra{grid-column:1;grid-row:3}.feature-story .eyebrow{font-size:11px;margin-bottom:20px}.feature-story .lead{font-size:18px;margin:0}.feature-story .sub{font-size:15px;margin:22px 0}.practice-flow{gap:12px;margin:0 0 26px}.practice-flow li{font-size:12px;padding-top:10px}.practice-flow span{font-size:26px}.delay-setting{font-size:12px}.feature-film{width:min(100%,330px)}.feature-film figcaption{font-size:12px}.film-play{font-size:14px;min-height:64px;padding:13px 15px}.practice-block{margin-top:44px}.practice-heading h3{font-size:26px}.practice-heading .mobile-only{display:block}.practice-heading>p:last-child{font-size:14px;margin-bottom:24px}.practice-grid{gap:14px}.practice-card-copy{padding:14px 11px 16px}.practice-sport{font-size:12px}.practice-card h4{font-size:15px;line-height:1.65;margin-bottom:8px}.practice-card-copy>p:last-child{font-size:12px;line-height:1.85}.practice-note{font-size:11px}.screen-reference-body{grid-template-columns:minmax(0,1fr);gap:24px}.screen-reference .product-proof{max-width:300px}}
 @media(max-width:360px){.practice-grid{gap:10px}.practice-card-copy{padding:12px 10px 14px}.practice-card h4{font-size:14px}.practice-flow{gap:8px}.practice-flow li{font-size:11px}}
 @media(max-height:540px) and (orientation:landscape){.film-stage{max-width:calc(78svh * 9 / 16);margin-inline:auto}.feature-film{width:100%}.film-play{font-size:12px;min-height:52px;padding:9px 10px;gap:7px}.film-play>img{width:21px;height:21px}}
+
+/* Mobile reading and conversion: retain the campaign art, reduce the journey. */
+[hidden]{display:none!important}
+.hero-kicker{color:#8beaf4;font-size:13px;letter-spacing:.07em;font-weight:650;margin:0 0 9px}
+.feature-jumps{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:640px;margin:26px auto 0;text-align:left}
+.feature-jumps a{position:relative;display:block;min-height:76px;padding:13px 40px 13px 18px;border:1px solid #36525d;border-radius:8px;background:#09191f;color:#f7f7f4;text-decoration:none;font-size:16px;font-weight:700;line-height:1.6}
+.feature-jumps span{display:block;font-size:12px;color:#b5c9d1;font-weight:500;margin-bottom:3px}
+.feature-jumps img{position:absolute;right:14px;top:50%;transform:translateY(-50%);filter:invert(1)}
+.feature-jumps a:last-child{border-color:#6a4937}.feature-jumps a:hover{background:#112a33}
+.film-tools{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:8px;color:#bac8d0;font-size:12px}
+.film-tools button{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:44px;padding:8px 13px;border:1px solid #476573;border-radius:6px;background:#0c2029;color:#ebfaff;font-size:14px;font-weight:650}
+.film-tools button img{filter:invert(1)}
+.film-dialog{padding:14px;border:1px solid #4c717f;border-radius:10px;background:#050e13;color:#f7f7f4;width:calc(100% - 16px);max-width:880px;height:calc(100svh - 16px);max-height:none;margin:auto;overflow:hidden}
+.film-dialog[open]{display:flex;flex-direction:column;gap:10px}
+.film-dialog::backdrop{background:#000e}
+.film-dialog-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex:none}
+.film-dialog-head strong{font-size:15px;line-height:1.6}
+.film-dialog-head button{min-height:44px;min-width:64px;padding:8px 14px;background:#17313e;color:#f7f7f4;border:1px solid #6c939f;border-radius:6px;font-size:14px}
+.film-dialog-stage{flex:1;min-height:0;background:#000;display:flex;justify-content:center;align-items:center}
+.film-dialog video{display:block;width:100%;height:100%;min-height:0;object-fit:contain;background:#000}
+.film-dialog>p{flex:none;font-size:12px;margin:0;color:#c0d2db;line-height:1.6}
+.feature-download{margin-top:28px}.feature-download .button{min-height:52px;font-size:15px}.feature-download .fine{margin:9px 0 0}
+.mobile-download{display:none}
+@media(min-width:761px){.hero-stage{height:clamp(340px,calc(100svh - 445px),650px)}.hero-description{line-height:1.75}.feature-jumps{margin-top:20px}}
+@media(max-width:760px){
+ html{scroll-padding-bottom:calc(100px + env(safe-area-inset-bottom,0px))}
+ body{padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))}
+ .site-header .button-small{font-size:12px;min-height:44px;padding:10px 11px;gap:7px}
+ .site-header .brand{font-size:15px;gap:8px}
+ .hero-bottom{padding-top:23px}
+ .hero-kicker{font-size:12px;letter-spacing:.02em;margin-bottom:9px}
+ .hero-jp{font-size:clamp(24px,6.6vw,40px);margin-bottom:13px}
+ .hero-description{font-size:16px;line-height:1.85;letter-spacing:0;margin-bottom:21px}
+ .hero-bottom>.fine{font-size:12px;color:#b3bec4;margin-top:12px}
+ .feature-jumps{gap:10px;margin-top:23px}
+ .feature-jumps a{font-size:14px;min-height:80px;padding:12px 27px 12px 12px}
+ .feature-jumps span{font-size:12px}.feature-jumps img{right:9px;width:15px}
+ .hero-foot{margin-top:8px;padding-bottom:12px;justify-content:flex-end}
+ .hero-foot>a{display:none}.hero-foot .motion-toggle{font-size:12px;min-height:44px}
+ .section{padding-block:56px}.compare-section{padding-top:48px}
+ .feature-story .eyebrow{font-size:12px;margin-bottom:16px}
+ .feature-story h2{margin-bottom:18px}
+ .feature-story .lead{font-size:17px;line-height:1.85}
+ .feature-story{gap:22px}.feature-story .sub{font-size:16px;line-height:1.9}
+ .feature-film{width:min(100%,330px)}
+ .feature-film figcaption{font-size:14px;line-height:1.8;margin-top:6px}
+ .film-about{font-size:12px;line-height:1.9}.film-about summary{min-height:44px;padding-block:10px}
+ .film-status{font-size:14px}
+ .practice-flow li{font-size:14px}.delay-setting{font-size:14px}
+ .text-link{font-size:14px;min-height:44px;line-height:1.7}
+ .practice-heading>p:last-child{font-size:15px}
+ .practice-card-copy{padding:15px 12px 17px}
+ .practice-card-copy>p:last-child{font-size:14px;line-height:1.8}
+ .practice-note,.sports-note{font-size:12px;color:#b5c2c9}
+ .feature-download .button{width:100%;font-size:15px;padding-inline:14px;gap:15px}
+ .feature-download .fine{font-size:12px}
+ .capability-row{font-size:13px}.compare-section>.fine{font-size:12px}
+ .sports-intro>p{font-size:15px}
+ .sports-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 16px}
+ .sport-heading{padding-top:13px;gap:8px;align-items:flex-start}
+ .sports-list .sport-no{font-size:10px;padding-top:6px;align-self:flex-start}
+ .sports-list h3{display:block;line-height:1.4;min-width:0}
+ .sports-list h3 span{display:block;font-size:clamp(23px,6.3vw,30px)}
+ .sports-list h3 small{display:block;font-size:12px;margin-top:3px}
+ .sports-list article>a img.sport-arrow{display:none}
+ .sports-list article p{font-size:14px;line-height:1.8;margin-top:10px}
+ .sports-list article p br{display:none}
+ .sport-action{font-size:12px;line-height:1.7}
+ .steps p{font-size:15px}.steps h3{font-size:18px}
+ .how-section .button{font-size:15px;width:100%;gap:18px;padding-inline:16px}
+ .how-section .fine{font-size:12px}
+ .faq-list summary{font-size:16px;line-height:1.7;padding-block:21px}
+ .faq-list p{font-size:15px;line-height:1.9;padding-left:0;color:#c7d2d7}
+ .closing-bottom .button{font-size:15px;padding-inline:17px;gap:15px}
+ .closing-bottom .fine{font-size:12px}
+ .closing-en{font-size:14.7vw}
+ footer>div{flex-wrap:wrap;gap:5px 18px}footer>div a{display:inline-flex;align-items:center;min-height:44px;font-size:13px}
+ footer>span{font-size:12px}
+ .mobile-download{position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));border-top:1px solid #42616e;background:#07151cf5;box-shadow:0 -6px 24px #0005}
+ .mobile-download>div{min-width:0;line-height:1.6}
+ .mobile-download strong{display:block;font-size:13px}
+ .mobile-download span{display:block;color:#b9c6cd;font-size:11px}
+ .mobile-download .button{min-height:48px;padding:12px 14px;gap:10px;font-size:14px;white-space:nowrap}
+}
+@media(max-width:360px){
+ h2{font-size:25px}
+ .site-header .brand{font-size:13px;gap:6px}.site-header .brand img{width:28px;height:28px}
+ .site-header .button-small{font-size:11px;padding-inline:9px}
+ .hero-jp{font-size:24px}.hero-description{font-size:15px}
+ .button-hero{font-size:14px;padding-inline:18px;gap:14px;white-space:nowrap}.button-hero img{width:18px}
+ .hero-kicker{font-size:11px}.feature-jumps a{font-size:13px;padding-left:10px;padding-right:19px}
+ .feature-jumps span{font-size:11px}.feature-jumps img{right:5px;width:11px}
+ .practice-flow li{font-size:13px}.practice-grid{gap:12px}
+ .practice-card-copy{padding:13px 10px 15px}.practice-card h4{font-size:15px}
+ .sports-list{gap:25px 12px}.sport-heading{gap:6px}
+ .mobile-download{padding-inline:12px;gap:8px}.mobile-download .button{padding-inline:12px;font-size:13px;gap:7px}
+ .mobile-download strong{font-size:12px}.mobile-download span{font-size:10px}
+}
+@media(max-height:540px) and (orientation:landscape){.mobile-download{display:none!important}body{padding-bottom:0}}

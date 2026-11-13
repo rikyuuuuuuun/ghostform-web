@@ -46,7 +46,7 @@ document.querySelectorAll('[data-play-film]').forEach(button => {
   });
   video.addEventListener('playing', () => {
     button.hidden = true;
-    document.querySelectorAll('.feature-film video').forEach(other => {
+    document.querySelectorAll('#compare-film, #delay-film').forEach(other => {
       if (other !== video && !other.paused) other.pause();
     });
   });
@@ -63,3 +63,66 @@ document.querySelectorAll('[data-play-film]').forEach(button => {
     if (status) status.textContent = '動画を読み込めませんでした。「動画を直接開く」もお試しください。';
   });
 });
+
+// Expand the same video in a modal; no duplicate player or second download.
+const filmDialog = document.querySelector('.film-dialog');
+let expandedFilm = null;
+let restoreFilm = null;
+let priorOverflow = '';
+if (filmDialog) filmDialog.addEventListener('close', () => {
+  if (restoreFilm) restoreFilm();
+  expandedFilm = null;
+  restoreFilm = null;
+  document.body.style.overflow = priorOverflow;
+});
+document.querySelector('[data-close-film]')?.addEventListener('click', () => filmDialog.close());
+document.querySelectorAll('[data-expand-film]').forEach(button => {
+  const video = document.getElementById(button.dataset.expandFilm);
+  const stage = video?.closest('.film-stage');
+  if (!video || !stage || !filmDialog?.showModal) return;
+  button.hidden = false;
+  button.addEventListener('click', () => {
+    if (expandedFilm) return;
+    const keepPlaying = !video.paused && !video.ended;
+    const playButton = stage.querySelector('[data-play-film]');
+    priorOverflow = document.body.style.overflow;
+    expandedFilm = video;
+    restoreFilm = () => {
+      const resume = !video.paused && !video.ended;
+      stage.insertBefore(video, playButton);
+      if (resume) video.play().catch(() => {});
+      button.focus();
+    };
+    filmDialog.querySelector('#film-dialog-title').textContent = video.id === 'delay-film'
+      ? 'ディレイ再生の実演' : 'レイヤー比較の実演';
+    filmDialog.querySelector('.film-dialog-stage').append(video);
+    filmDialog.showModal();
+    document.body.style.overflow = 'hidden';
+    if (keepPlaying) video.play().catch(() => {});
+  });
+});
+
+// Show a phone CTA after the first download action has scrolled away.
+// Hide it around videos and the final CTA so it cannot cover playback controls.
+const mobileDownload = document.querySelector('.mobile-download');
+const firstDownload = document.querySelector('.button-hero');
+const finalDownload = document.querySelector('.closing [data-store-link]');
+if (mobileDownload && firstDownload && finalDownload) {
+  const phoneLayout = matchMedia('(max-width: 760px)');
+  const videos = [...document.querySelectorAll('.feature-film video')];
+  const inView = element => {
+    const bounds = element.getBoundingClientRect();
+    return bounds.bottom > 0 && bounds.top < innerHeight;
+  };
+  const updateDownload = () => {
+    mobileDownload.hidden = !phoneLayout.matches
+      || firstDownload.getBoundingClientRect().bottom > 0
+      || inView(finalDownload)
+      || videos.some(inView);
+  };
+  const observer = new IntersectionObserver(updateDownload, {threshold: [0, 0.01, 1]});
+  [firstDownload, finalDownload, ...videos].forEach(element => observer.observe(element));
+  phoneLayout.addEventListener('change', updateDownload);
+  window.addEventListener('resize', updateDownload, {passive: true});
+  updateDownload();
+}

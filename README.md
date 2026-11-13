@@ -27,6 +27,12 @@ Inspect and commit only the intended files, then push `main`. Wait for the match
 
 For feature-film updates, verify portrait widths of 320px and 390px, landscape and desktop. Check that both videos begin only after a tap, remain inline, and that starting the other video pauses the first. Keep the native controls and direct MP4 fallback. Practice photos need a visible AI-illustration disclosure; the operation demos need their sample/browser provenance. Never show the sample comparison as an athlete's improvement, or the delay as an edit-created time shift. Preserve captions, free-versus-PRO delay limits and video-source credits when re-encoding.
 
+Mobile conversion: the hero has direct comparison/delay links, and both feature stories end with a download action. The phone-only download bar appears after the first main download button has scrolled away; it hides when either video or the closing download action is visible, and in short landscape layouts. Keep its safe-area padding and the page's matching bottom clearance. All new download links must retain `data-store-link` and the issued Japanese fallback URL so source campaigns continue to apply.
+
+The `大きく見る` action opens a native HTML dialog and moves the existing video into it; closing restores the same player and playback position. Do not duplicate the video element or restart it. Check open/close during playback, focus returning to the expand button, the other video's automatic pause, and native/direct-link fallbacks. The dialog uses the page viewport rather than relying on browser fullscreen behavior. Privacy-page changes add only a home link and wrapping; preserve the policy wording.
+
+Keep Japanese headings, short labels and calls to action free of unnecessary `。`. Complete explanatory sentences can retain normal punctuation.
+
 Music in both films: "Cipher" Kevin MacLeod (incompetech.com), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), excerpted and volume-adjusted. Product-demo source footage: Jill Burrow / Pexels (comparison), Julia Larson / Pexels (delay). Full credits are also in the films and the expandable video notes.
 
 For indexing, use the verified Search Console property for the exact public prefix. Do not treat ownership verification or an accepted crawl request as proof of indexing. If sitemap fetching fails while public XML is valid and returns HTTP 200, record both results and check subsequent Google fetches. Repeated URL submissions do not increase crawl priority.
