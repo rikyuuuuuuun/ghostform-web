@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preload" href="assets/display.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/athlete-hero.jpg" as="image">
-  <link rel="stylesheet" href="styles.css?v=20261113-6">
+  <link rel="stylesheet" href="styles.css?v=20261113-7">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Ghostform（ゴーストフォーム）","applicationCategory":"SportsApplication","operatingSystem":"iOS 16.0以降","url":"https://rikyuuuuuuun.github.io/ghostform-web/","installUrl":"https://apps.apple.com/jp/app/id6831656347","image":"https://rikyuuuuuuun.github.io/ghostform-web/assets/app-icon.jpg","description":"動画を重ねるフォーム比較とディレイ再生。ゴルフ・野球・体操・ダンスなどの練習を振り返るiPhoneアプリ。","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY","description":"無料ダウンロード。広告・アプリ内購入あり。"}}</script>
 </head>
 <body>
@@ -47,25 +47,41 @@
       </div>
     </section>
 
-    <section id="compare" class="compare-section section">
-      <div class="wrap feature">
-        <div class="feature-copy"><p class="eyebrow cyan">01 / COMPARE</p><h2>違いを見つけて、<br>次の一本へ。</h2><p class="lead">お手本と自分。前回と今回。<br>2本の動画を重ねて、<br>気になる瞬間を見比べる。</p><p class="sub">別々に再生していた動きを、ひとつの画面で。<br>頭の位置や体のライン。まずは、ひとつの違いから。</p>
-          <div class="product-tabs" role="group" aria-label="掲載画面を切り替える"><button class="product-tab" type="button" aria-pressed="true" data-screen="overlay" hidden>重ねる</button><button class="product-tab" type="button" aria-pressed="false" data-screen="side" hidden>並べる</button></div>
-          <p class="screen-description">半透明で重ねて、動きのズレを確認。</p>
-          <a class="text-link" href="#how-to">最初の比較をはじめる<img src="assets/arrow-up-right.svg" alt="" width="20" height="20"></a>
-        </div>
-        <figure class="product-proof"><div class="screen-crop overlay"><img id="comparison-screen" src="assets/store-01.jpg" alt="お手本と練習の動画を半透明で重ねたGhostformのApp Store掲載画面" width="600" height="1304" loading="lazy"></div><figcaption>Ghostform / App Store掲載画面（静止画）</figcaption></figure>
+    <section id="compare" class="compare-section section" aria-labelledby="compare-title">
+      <div class="wrap feature feature-story">
+        <div class="feature-copy"><p class="eyebrow cyan">01 / LAYER COMPARISON</p><h2 id="compare-title">違いを見つけて、<br>次の一本へ。</h2><p class="lead">お手本と自分。前回と今回。<br>2本の動画を重ねて、<br>気になる瞬間を見比べる。</p></div>
+        <figure class="feature-film">
+          <div class="film-stage"><video id="compare-film" width="720" height="1280" controls playsinline preload="none" poster="assets/video/compare-practice-v2.jpg" aria-label="レイヤー比較と4競技の活用例・30秒" aria-describedby="compare-film-caption"><source src="assets/video/compare-practice-v2.mp4" type="video/mp4">動画を再生できない場合は、下のリンクからご覧ください。</video><button class="film-play" type="button" data-play-film="compare-film" hidden><img src="assets/play-fill.svg" alt="" width="28" height="28"><span>30秒で使い方を見る<small>音声付き</small></span></button></div>
+          <figcaption id="compare-film-caption">重ねる・止める・コマ送りと、4競技の使い方。</figcaption><p class="film-status" aria-live="polite"></p>
+          <details class="film-about"><summary>動画について・再生できないとき</summary><p>実アプリをブラウザで操作したデモです。同一素材の時刻をずらした操作例で、上達の前後を示したものではありません。iPhone実機の録画ではありません。 活用写真はAI生成です。<a href="assets/video/compare-practice-v2.mp4">動画を直接開く</a></p><p>音楽：Cipher / Kevin MacLeod (incompetech.com)、<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>。抜粋・音量調整。実演の映像：Jill Burrow / Pexels。</p></details>
+        </figure>
+        <div class="feature-extra"><ol class="practice-flow" aria-label="レイヤー比較の使い方"><li><span>01</span>2本を選ぶ</li><li><span>02</span>瞬間をそろえる</li><li><span>03</span>違いをひとつ見る</li></ol><p class="sub">頭の位置、前傾、手足のライン。<br>見つけた違いを、次の練習で試す。</p><a class="text-link" href="#compare-sports">自分の競技なら、どこを見る？<img src="assets/arrow-up-right.svg" alt="" width="20" height="20"></a></div>
       </div>
-      <div class="wrap capability-row"><span>重ねる・左右・上下</span><span>タイミング合わせ</span><span>コマ送りで確認</span><span>線を描いて共有</span></div>
-      <p class="wrap fine">線・図形や書き出しの一部機能にはPROが必要です。</p>
+      <div class="wrap practice-block" id="compare-sports"><div class="practice-heading"><p class="eyebrow cyan">WHAT TO COMPARE</p><h3>あなたの競技なら、<br class="mobile-only">ここを見比べる。</h3><p>同じ撮影方向・同じ局面にそろえると、違いを追いやすくなります。</p></div><div class="practice-grid"><article class="practice-card"><img src="assets/sports/golf.jpg" srcset="assets/sports/golf-480.jpg 480w, assets/sports/golf.jpg 960w" sizes="(max-width:760px) calc((100vw - 54px)/2), (max-width:1100px) calc((100vw - 138px)/2), 310px" alt="ゴルフスイングをする選手（活用イメージ）" width="960" height="640" loading="lazy" decoding="async"><div class="practice-card-copy"><p class="practice-sport">ゴルフ</p><h4>頭の位置と前傾</h4><p>アドレスやトップ。頭の位置や前傾を重ねて見る。</p></div></article>
+<article class="practice-card"><img src="assets/sports/baseball.jpg" srcset="assets/sports/baseball-480.jpg 480w, assets/sports/baseball.jpg 960w" sizes="(max-width:760px) calc((100vw - 54px)/2), (max-width:1100px) calc((100vw - 138px)/2), 310px" alt="バッティングをする選手（活用イメージ）" width="960" height="640" loading="lazy" decoding="async"><div class="practice-card-copy"><p class="practice-sport">野球</p><h4>踏み出しと上半身</h4><p>投球・打撃の踏み出しで、足と上半身の位置を見る。</p></div></article>
+<article class="practice-card"><img src="assets/sports/gymnastics.jpg" srcset="assets/sports/gymnastics-480.jpg 480w, assets/sports/gymnastics.jpg 960w" sizes="(max-width:760px) calc((100vw - 54px)/2), (max-width:1100px) calc((100vw - 138px)/2), 310px" alt="倒立のラインを保つ体操選手（活用イメージ）" width="960" height="640" loading="lazy" decoding="async"><div class="practice-card-copy"><p class="practice-sport">体操</p><h4>倒立や着地のライン</h4><p>倒立や着地を同じコマで。前回との違いを見る。</p></div></article>
+<article class="practice-card"><img src="assets/sports/dance.jpg" srcset="assets/sports/dance-480.jpg 480w, assets/sports/dance.jpg 960w" sizes="(max-width:760px) calc((100vw - 54px)/2), (max-width:1100px) calc((100vw - 138px)/2), 310px" alt="振り付けを踊るダンサー（活用イメージ）" width="960" height="640" loading="lazy" decoding="async"><div class="practice-card-copy"><p class="practice-sport">ダンス</p><h4>同じポーズの手足</h4><p>同じポーズをそろえ、手足の位置や向きを見る。</p></div></article></div><p class="practice-note">写真は活用イメージ（AI生成）。撮影角度が違うと、姿勢や角度の見え方も変わります。</p></div>
+      <div class="wrap screen-reference"><details><summary>アプリの掲載画面も見る</summary><div class="screen-reference-body"><div><div class="product-tabs" role="group" aria-label="掲載画面を切り替える"><button class="product-tab" type="button" aria-pressed="true" data-screen="overlay" hidden>重ねる</button><button class="product-tab" type="button" aria-pressed="false" data-screen="side" hidden>並べる</button></div><p class="screen-description">半透明で重ねて、動きのズレを確認。</p><a class="text-link" href="#how-to">最初の比較をはじめる<img src="assets/arrow-up-right.svg" alt="" width="20" height="20"></a></div><figure class="product-proof"><div class="screen-crop overlay"><img id="comparison-screen" src="assets/store-01.jpg" alt="お手本と練習の動画を半透明で重ねたGhostformのApp Store掲載画面" width="600" height="1304" loading="lazy"></div><figcaption>Ghostform / App Store掲載画面（静止画）</figcaption></figure></div></details></div>
+      <div class="wrap capability-row"><span>重ねる・左右・上下</span><span>タイミング合わせ</span><span>コマ送りで確認</span><span>線を描いて共有</span></div><p class="wrap fine">線・図形や書き出しの一部機能にはPROが必要です。</p>
     </section>
 
     <div class="brand-strip"><div class="wrap"><strong>GHOSTFORM</strong><span>FOR EVERY ATHLETE</span></div></div>
 
-    <section id="delay" class="section delay-section"><div class="wrap feature delay-feature">
-      <figure class="product-proof delay-proof"><div class="delay-crop"><img src="assets/store-05.jpg" alt="動いた直後の映像を10秒遅れで振り返るディレイ再生のApp Store掲載画面" width="600" height="1304" loading="lazy"></div><figcaption>Ghostform / App Store掲載画面（静止画）</figcaption></figure>
-      <div class="feature-copy"><p class="eyebrow orange">02 / DELAY REPLAY</p><h2>動いた直後の自分を、<br>その場でチェック。</h2><p class="lead">さっきの感覚が、<br>残っているうちに。</p><p class="sub">カメラの映像を数秒遅れで再生。<br>動き終わったら画面を振り返るだけ。<br>録画を止めて再生する手間を減らします。</p><ol class="delay-flow"><li>動く</li><li>振り返る</li><li>次の一本へ</li></ol><p class="fine">一人での自主練にも、選手と一緒に確認する指導にも。</p></div>
-    </div></section>
+    <section id="delay" class="section delay-section" aria-labelledby="delay-title">
+      <div class="wrap feature feature-story">
+        <div class="feature-copy"><p class="eyebrow orange">02 / DELAY REPLAY</p><h2 id="delay-title">動いた直後を、<br>自分で確かめる。</h2><p class="lead">さっきの感覚が、<br>残っているうちに。</p></div>
+        <figure class="feature-film">
+          <div class="film-stage"><video id="delay-film" width="720" height="1280" controls playsinline preload="none" poster="assets/video/delay-practice-v3.jpg" aria-label="3秒ディレイと4競技の活用例・30秒" aria-describedby="delay-film-caption"><source src="assets/video/delay-practice-v3.mp4" type="video/mp4">動画を再生できない場合は、下のリンクからご覧ください。</video><button class="film-play" type="button" data-play-film="delay-film" hidden><img src="assets/play-fill.svg" alt="" width="28" height="28"><span>30秒で使い方を見る<small>音声付き</small></span></button></div>
+          <figcaption id="delay-film-caption">1回の動きが約3秒後に返る実演と、4競技の使い方。</figcaption><p class="film-status" aria-live="polite"></p>
+          <details class="film-about"><summary>動画について・再生できないとき</summary><p>サンプル映像をカメラ入力に使ったブラウザ実演です。同じ連続収録からライブ小窓と遅延映像を拡大し、編集で両者の時間差を加えていません。iPhone実機の録画ではありません。 活用写真はAI生成です。<a href="assets/video/delay-practice-v3.mp4">動画を直接開く</a></p><p>音楽：Cipher / Kevin MacLeod (incompetech.com)、<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>。抜粋・音量調整。実演の映像：Julia Larson / Pexels。</p></details>
+        </figure>
+        <div class="feature-extra"><ol class="practice-flow delay-practice-flow" aria-label="ディレイ再生の使い方"><li><span>01</span>まず動く</li><li><span>02</span>映像を見返す</li><li><span>03</span>次の1回で試す</li></ol><p class="sub">カメラの映像を数秒遅れで再生。<br>動き終わって画面を見れば、直前の自分が。<br>録画を止めて探す手間を減らします。</p><p class="delay-setting">画面を見るまでの時間に合わせて3〜60秒に設定。<br>無料版は10秒まで。動画は3秒ディレイの実演です。</p><a class="text-link" href="#delay-sports">いつもの練習では、こう使う<img src="assets/arrow-up-right.svg" alt="" width="20" height="20"></a></div>
+      </div>
+      <div class="wrap practice-block" id="delay-sports"><div class="practice-heading"><p class="eyebrow orange">MOVE. LOOK BACK. TRY AGAIN.</p><h3>動く、見返す。<br class="mobile-only">いろんな練習で。</h3><p>ひとりの自主練にも、選手とコーチが一緒に振り返る時間にも。</p></div><div class="practice-grid"><article class="practice-card"><img src="assets/practice/delay-golf.jpg" srcset="assets/practice/delay-golf-480.jpg 480w, assets/practice/delay-golf.jpg 960w" sizes="(max-width:760px) calc((100vw - 54px)/2), (max-width:1100px) calc((100vw - 138px)/2), 310px" alt="スマホを設置してゴルフを練習する選手（活用イメージ）" width="960" height="640" loading="lazy" decoding="async"><div class="practice-card-copy"><p class="practice-sport">ゴルフ</p><h4>打った直後に見る</h4><p>打ってから画面へ。感覚が残るうちにフォームを確認。</p></div></article>
+<article class="practice-card"><img src="assets/practice/delay-baseball.jpg" srcset="assets/practice/delay-baseball-480.jpg 480w, assets/practice/delay-baseball.jpg 960w" sizes="(max-width:760px) calc((100vw - 54px)/2), (max-width:1100px) calc((100vw - 138px)/2), 310px" alt="スマホを設置して打撃練習をする選手（活用イメージ）" width="960" height="640" loading="lazy" decoding="async"><div class="practice-card-copy"><p class="practice-sport">野球</p><h4>振るたび見返す</h4><p>1スイングごとに振り返り、次の1球で試す。</p></div></article>
+<article class="practice-card"><img src="assets/practice/delay-gymnastics.jpg" srcset="assets/practice/delay-gymnastics-480.jpg 480w, assets/practice/delay-gymnastics.jpg 960w" sizes="(max-width:760px) calc((100vw - 54px)/2), (max-width:1100px) calc((100vw - 138px)/2), 310px" alt="演技の後でスマホを見る体操選手（活用イメージ）" width="960" height="640" loading="lazy" decoding="async"><div class="practice-card-copy"><p class="practice-sport">体操</p><h4>着地後に見返す</h4><p>演技を終えてから、選手とコーチで姿勢を確認。</p></div></article>
+<article class="practice-card"><img src="assets/practice/delay-dance.jpg" srcset="assets/practice/delay-dance-480.jpg 480w, assets/practice/delay-dance.jpg 960w" sizes="(max-width:760px) calc((100vw - 54px)/2), (max-width:1100px) calc((100vw - 138px)/2), 310px" alt="スマホを設置してダンスを練習する選手（活用イメージ）" width="960" height="640" loading="lazy" decoding="async"><div class="practice-card-copy"><p class="practice-sport">ダンス</p><h4>手足のラインを見る</h4><p>踊った直後を見返し、次の反復練習に生かす。</p></div></article></div><p class="practice-note">写真は活用イメージ（AI生成）。動作の長さと、画面を見るまでの時間に合わせて遅延秒数を選んでください。</p></div>
+    </section>
 
     <section id="sports" class="section sports-section"><div class="wrap">
       <p class="eyebrow cyan">DIFFERENT SPORTS. SAME CURIOSITY.</p><div class="sports-intro"><h2>競技は変わっても、<br>見返したい瞬間がある。</h2><p>ゴルフ、野球、体操、ダンス、テニス、サッカー。<br>お手本との比較にも、自分の前回と今回にも。</p></div>
@@ -129,6 +145,6 @@
   </main>
   <footer class="wrap"><a class="brand" href="./" aria-label="Ghostform ホーム"><img src="assets/app-icon.jpg" alt="" width="36" height="36"><span>GHOSTFORM</span></a><div><a href="support.html">サポート</a><a href="privacy.html">プライバシー</a><a href="https://note.com/ghostform">開発のnote</a></div><span>© Ghostform</span></footer>
   <script src="store-links.js?v=20261113-4"></script>
-  <script src="site.js?v=20261113-3" defer></script>
+  <script src="site.js?v=20261113-4" defer></script>
 </body>
 </html>
