@@ -289,3 +289,50 @@ h2{font-size:clamp(28px,5vw,65px)}
  .hero-description{font-size:15px}.hero-bottom>.hero-plan-note{line-height:1.9;margin-bottom:4px}
 }
 @media(max-width:360px){.pricing-section h2{font-size:25px}.plan{padding:24px 18px}.plan-cta{font-size:14px}.site-header nav{font-size:12px}}
+
+/* Dated, source-backed comparisons; keep one rival beside Ghostform on phones. */
+.comparison-jump{display:flex;align-items:center;gap:10px;min-height:44px;width:fit-content;font-size:14px;color:var(--cyan);text-underline-offset:4px;margin:-20px 0 28px}
+.app-comparison{margin-top:64px;padding-top:48px;border-top:1px solid var(--line);scroll-margin-top:28px}
+.comparison-heading .eyebrow{margin-bottom:16px}
+.comparison-heading h3{font-size:32px;line-height:1.6;font-weight:600;margin:0 0 16px}
+.comparison-heading>p:last-child{font-size:15px;line-height:1.9;color:var(--secondary);margin:0 0 24px}
+.comparison-date{font-size:13px;line-height:1.8;color:var(--secondary);margin:0 0 16px}
+.comparison-switch{display:none;gap:8px;margin:0 0 20px}
+.comparison-switch button{flex:1;min-height:48px;border:1px solid #516771;border-radius:8px;background:transparent;color:var(--secondary);font:inherit;font-size:15px;cursor:pointer}
+.comparison-switch button[aria-pressed="true"]{color:var(--ink);background:#1b343e;border-color:var(--cyan)}
+.comparison-switch button:hover{background:#1b343e}
+.comparison-switch button:focus-visible,.comparison-scroll:focus-visible{outline:2px solid var(--cyan);outline-offset:4px}
+.comparison-scroll{overflow-x:auto;overscroll-behavior-x:contain;border:1px solid #354b55;border-radius:8px}
+.app-comparison-table{border-collapse:separate;border-spacing:0;table-layout:fixed;width:100%;min-width:880px;text-align:left}
+.comparison-caption{caption-side:bottom;text-align:left;padding:16px;font-size:12px;line-height:1.9;color:var(--secondary);background:#07141a}
+.app-comparison-table th,.app-comparison-table td{padding:20px 16px;vertical-align:top;line-height:1.85;border-bottom:1px solid #2d424c;overflow-wrap:anywhere;font-size:14px;font-weight:400}
+.app-comparison-table thead th{background:#102129;font-size:16px;font-weight:600}
+.app-comparison-table thead th:first-child{width:16%}
+.app-comparison-table th[scope="row"]{font-size:13px;color:var(--secondary);font-weight:500}
+.app-comparison-table .our-app{background:#102b34}
+.app-comparison-table thead .our-app{color:var(--cyan)}
+.app-comparison-table small{display:block;font-size:12px;line-height:1.85;color:var(--secondary);font-weight:400;margin-top:4px}
+.app-comparison-table strong{font-weight:600}
+.comparison-price-row strong{display:block;font-size:23px;line-height:1.4;font-variant-numeric:tabular-nums;white-space:nowrap}
+.comparison-price-row strong small{white-space:normal}
+.comparison-price-row .our-app strong{color:var(--cyan)}
+.app-comparison-table tbody tr:last-child>*{border-bottom:0}
+.comparison-scroll-hint{display:none;font-size:13px;line-height:1.8;color:var(--secondary);margin:0 0 12px}
+.comparison-note{font-size:12px;line-height:1.9;color:var(--secondary);margin:16px 0 0}
+.comparison-sources{margin-top:20px;border-block:1px solid var(--line);font-size:13px;color:var(--secondary);line-height:1.9}
+.comparison-sources summary{padding:16px 0;min-height:48px;cursor:pointer;color:var(--ink)}
+.comparison-sources>div{padding:0 0 20px}.comparison-sources p{margin:0 0 16px}.comparison-sources ul{padding-left:20px;margin:0 0 16px}.comparison-sources li{margin-bottom:12px}.comparison-sources a{color:var(--cyan);text-underline-offset:4px}
+@media(max-width:1000px){.comparison-scroll-hint{display:block}}
+@media(max-width:760px){
+ .comparison-jump{font-size:14px;margin:-12px 0 24px}
+ .app-comparison{margin-top:48px;padding-top:32px}.comparison-heading h3{font-size:24px}.comparison-heading>p:last-child{font-size:15px}
+ .comparison-ready .comparison-switch:not([hidden]){display:flex}.comparison-ready .comparison-scroll-hint{display:none}
+ .comparison-ready .app-comparison-table{min-width:0}
+ .comparison-ready[data-selected-company="a"] :is(.company-b,.company-c),.comparison-ready[data-selected-company="b"] :is(.company-a,.company-c),.comparison-ready[data-selected-company="c"] :is(.company-a,.company-b){display:none}
+ .comparison-ready .app-comparison-table thead th:first-child{width:22%}
+ .comparison-ready .app-comparison-table thead th:not(:first-child){width:39%}
+ .app-comparison-table th,.app-comparison-table td{font-size:13px;padding:16px 8px;line-height:1.9}
+ .app-comparison-table thead th{font-size:14px}.app-comparison-table th[scope="row"]{font-size:12px}
+ .app-comparison-table small{font-size:12px}.comparison-price-row strong{font-size:19px}
+ .comparison-caption{padding:12px;font-size:12px}.comparison-sources{font-size:13px}
+}

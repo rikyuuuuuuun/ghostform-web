@@ -21,7 +21,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preload" href="assets/display.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/athlete-hero.jpg" as="image">
-  <link rel="stylesheet" href="styles.css?v=20261114-4">
+  <link rel="stylesheet" href="styles.css?v=20261114-5">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Ghostform（ゴーストフォーム）","applicationCategory":"SportsApplication","operatingSystem":"iOS 16.0以降","url":"https://rikyuuuuuuun.github.io/ghostform-web/","installUrl":"https://apps.apple.com/jp/app/id6831656347","image":"https://rikyuuuuuuun.github.io/ghostform-web/assets/app-icon.jpg","description":"動画を重ねるフォーム比較とディレイ再生。ゴルフ・野球・体操・ダンスなどの練習を振り返るiPhoneアプリ。","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY","description":"無料ダウンロード。広告・アプリ内購入あり。"}}</script>
   <script type="module" src="metrics.mjs?v=20261114-1"></script>
 </head>
@@ -145,6 +145,7 @@
         <h2 id="pricing-title">無料のままでも、<br class="mobile-only">しっかり使える</h2>
         <p class="pricing-lead">重ねて比べる、骨格を見る、直前の動きを見返す。練習の基本をひとつのアプリで。<br>まずは無料で使って、必要になったときだけPROへ。</p>
         <p class="pricing-promise">月額・年額サブスクなし<span>PROは一度の購入で使えます</span></p>
+        <a class="comparison-jump" href="#app-comparison">A社・B社・C社との比較を見る<img src="assets/arrow-right.svg" class="arrow-page" alt="" width="18" height="18"></a>
         <div class="pricing-grid">
           <article class="plan" aria-labelledby="free-plan-title">
             <div class="plan-heading"><p class="plan-label">まずは無料で</p><h3 id="free-plan-title">無料版</h3><p class="plan-price">¥0</p><p class="plan-description">比較も、骨格も、直前の振り返りも</p></div>
@@ -180,6 +181,42 @@
             <div><dt>前回との変化を、続けて見たい</dt><dd>比較の履歴を100件まで<br>練習の記録を残して、次の確認へ</dd></div>
           </dl>
         </aside>
+        <section id="app-comparison" class="app-comparison" aria-labelledby="app-comparison-title">
+          <div class="comparison-heading"><p class="eyebrow cyan">Choose your practice tool</p><h3 id="app-comparison-title">機能と、支払い方を見比べる</h3><p>フォーム確認に何を使うか、続ける練習に合わせて選ぼう</p></div>
+          <p class="comparison-date"><time datetime="2026-11-14">2026年11月14日</time>時点の比較 ／ 日本のiPhone版</p>
+          <div class="comparison-switch" role="group" aria-label="比較するアプリ" hidden>
+            <button type="button" data-compare-company="a" aria-pressed="true" aria-controls="app-comparison-table">A社</button>
+            <button type="button" data-compare-company="b" aria-pressed="false" aria-controls="app-comparison-table">B社</button>
+            <button type="button" data-compare-company="c" aria-pressed="false" aria-controls="app-comparison-table">C社</button>
+          </div>
+          <p class="comparison-scroll-hint">横にスクロールして、各社の情報をご覧いただけます</p>
+          <div class="comparison-scroll" role="region" aria-label="GhostformとA社・B社・C社の料金・機能比較" tabindex="0">
+            <table id="app-comparison-table" class="app-comparison-table">
+              <caption class="comparison-caption">有料料金は掲載プランの一例です。機能の利用条件はプラン・端末により異なります。</caption>
+              <thead><tr><th scope="col">比較項目</th><th scope="col" class="our-app">Ghostform<small>フォーム比較・ディレイ</small></th><th scope="col" class="company-a">A社<small>フォーム分析・指導</small></th><th scope="col" class="company-b">B社<small>比較・描画・ディレイ</small></th><th scope="col" class="company-c">C社<small>ディレイ・動作解析</small></th></tr></thead>
+              <tbody>
+                <tr><th scope="row">支払い方</th><td class="our-app"><strong>無料＋買い切り</strong><small>月額・年額なし</small></td><td class="company-a">月額・年額など</td><td class="company-b">月額・年額</td><td class="company-c">月額・年額など</td></tr>
+                <tr class="comparison-price-row"><th scope="row">有料料金例</th><td class="our-app"><strong>¥680</strong><small>一度だけの購入<br>PRO・公開記念価格</small></td><td class="company-a"><strong>¥1,500<small>／月・Standard</small></strong><small>Premiumは¥2,500／月</small></td><td class="company-b"><strong>¥400<small>／月</small></strong><small>または¥4,000／年</small></td><td class="company-c"><strong>¥1,100<small>／月</small></strong><small>年額例：¥3,500・¥9,000</small></td></tr>
+                <tr><th scope="row">無料での利用</th><td class="our-app">基本機能は無料<small>広告・一部上限あり</small></td><td class="company-a">14日間の体験<small>コーチの契約条件により、選手は無料</small></td><td class="company-b">無料利用可<small>範囲は出典参照</small></td><td class="company-c">購入前に利用可<small>範囲は出典参照</small></td></tr>
+                <tr><th scope="row">映像の比較</th><td class="our-app">重ねる・左右・上下<small>無料</small></td><td class="company-a">重ねる・並べる</td><td class="company-b">重ねる・並べる</td><td class="company-c">分割表示</td></tr>
+                <tr><th scope="row">ディレイ再生</th><td class="our-app">無料で3〜10秒<small>PROは最大60秒</small></td><td class="company-a">公式説明に記載なし</td><td class="company-b">対応</td><td class="company-c">対応<small>長時間バッファにも対応</small></td></tr>
+                <tr><th scope="row">AIによる姿勢解析</th><td class="our-app">2D骨格表示<small>無料・端末内で解析</small></td><td class="company-a">2D骨格表示<small>Standardに対応<br>ゴルフ3DはPremium</small></td><td class="company-b">公式説明に記載なし</td><td class="company-c">競技別の動作解析<small>端末内で解析</small></td></tr>
+                <tr><th scope="row">特徴的な機能</th><td class="our-app">比較・骨格・ディレイをひとつに</td><td class="company-a">コーチとの動画共有・メッセージ</td><td class="company-b">動画への描画・比較の書き出し</td><td class="company-c">外部カメラ接続・複数方向の撮影</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="comparison-note">「記載なし」は、今回確認した公式説明に記載がない項目です。非対応を意味しません。各社の機能・料金が同等という比較ではありません。</p>
+          <details class="comparison-sources"><summary>比較条件・出典を見る</summary><div>
+            <p>各社の日本向けApp Store掲載情報と開発元の公開情報を、上記の日付に確認しました。料金は個人向け有料プランの掲載例です。他のプラン・購入条件がある場合もあり、最新の価格や利用条件は各アプリの購入画面をご確認ください。</p>
+            <ul>
+              <li><strong>Ghostform</strong>：PRO ¥680（買い切り・公開記念価格）。<a data-store-link href="https://apps.apple.com/jp/app/id6831656347?pt=129755185&amp;ct=gf_web_202611&amp;mt=8" target="_blank" rel="noopener noreferrer">App Store掲載情報</a>と現行アプリの仕様を確認</li>
+              <li><strong>A社</strong>：Individual Standard Monthly ¥1,500、Individual Premium Monthly ¥2,500。<a href="https://apps.apple.com/jp/app/onform-%E5%8B%95%E7%94%BB%E5%88%86%E6%9E%90%E3%82%A2%E3%83%97%E3%83%AA/id1490334045" target="_blank" rel="noopener noreferrer">App Store掲載情報</a>・<a href="https://onform.com/pricing/" target="_blank" rel="noopener noreferrer">開発元のプラン説明</a>。Standard／Proのコーチと利用する選手には、無料となる条件あり</li>
+              <li><strong>B社</strong>：月額プラン ¥400、年額プラン ¥4,000。<a href="https://apps.apple.com/jp/app/skill-cam/id6788213774" target="_blank" rel="noopener noreferrer">App Store掲載情報</a>・<a href="https://www.sportlight.jp/news/2026/08/13/skill-cam/" target="_blank" rel="noopener noreferrer">開発元の機能・料金案内</a></li>
+              <li><strong>C社</strong>：Monthly ¥1,100、Yearly ¥3,500・¥9,000。<a href="https://apps.apple.com/jp/app/video-delay-instant-replay/id1135528824" target="_blank" rel="noopener noreferrer">App Store掲載情報</a>。週額や無料体験付きなど、別の料金も掲載</li>
+            </ul>
+            <p>公式の掲載情報を比較したもので、各社アプリの実機テストや解析精度の比較は行っていません。</p>
+          </div></details>
+        </section>
       </div>
     </section>
 
@@ -200,5 +237,6 @@
   <aside class="mobile-download" aria-label="iPhone版のダウンロード" hidden><div><strong>iPhone版を無料で</strong><span>広告・アプリ内購入あり</span></div><a class="button" data-store-link href="https://apps.apple.com/jp/app/id6831656347?pt=129755185&amp;ct=gf_web_202611&amp;mt=8">ダウンロード<img src="assets/arrow-up-right.svg" alt="" width="18" height="18"></a></aside>
   <script src="store-links.js?v=20261114-1"></script>
   <script src="site.js?v=20261114-2" defer></script>
+  <script src="comparison.js?v=20261114-1" defer></script>
 </body>
 </html>

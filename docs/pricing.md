@@ -31,3 +31,23 @@ The supplied competitive report is a research lead, not publication-ready eviden
 Primary references checked on 2026-11-14: [Onform on the Japanese App Store](https://apps.apple.com/jp/app/id1490334045) and [Skill Cam developer announcement](https://www.sportlight.jp/news/2026/08/13/skill-cam/). These support omitting the supplied generalization, not a numerical competitor-price comparison. Recheck any future named comparison against current primary plan details before publication.
 
 Current-pass browser evidence is stored outside the public repo in `../../outputs/ghostform-pricing-value/`. QA clicks are excluded via `gf_qa=1`; a successful destination check does not establish conversion improvement or a download.
+
+## Dated A/B/C comparison — 2026-11-14
+
+The user explicitly requested a real app comparison labeled A社/B社/C社 and dated as of today. `#app-comparison` now sits inside pricing after the optional-upgrade examples. The labels represent specific apps, not a claim about all competitors. Linked primary sources remain available in the expandable conditions panel.
+
+| Label | Specific app / public Japan listing | Published paid-plan examples |
+| --- | --- | --- |
+| A社 | Onform, ID 1490334045 | Individual Standard Monthly ¥1,500; Individual Premium Monthly ¥2,500 |
+| B社 | Skill Cam, ID 6788213774 | 月額プラン ¥400; 年額プラン ¥4,000 |
+| C社 | Video Delay Instant Replay, ID 1135528824 | Monthly ¥1,100; Yearly ¥3,500 and ¥9,000 |
+
+These are selected listed products, not an assertion of each app's minimum available price or equivalent plans. A's listing also contains legacy Personal entries; do not call ¥1,500 its absolute minimum. A's current developer pricing page defines 2D skeleton tracking in Individual Standard and golf 3D in Premium; Standard/Pro-coached athletes have free-use conditions. It also offers a 14-day trial. B's public listing/developer announcement supports overlay/split, delayed capture and annotation/export. C's current listing supports split display, delay, sport-specific on-device AI, external cameras and multiple viewing directions. Do not repeat the supplied report's outdated claim that C has no comparison/AI. Expanding the live App Store list also revealed a ¥3,500 Yearly entry beyond the initial list; both base Yearly examples are retained, alongside the note that weekly/free-trial pricing differs.
+
+For A's delay and B's AI, the table says the checked official description does not mention them. Missing documentation is not proof of non-support. All functionality rows describe documented availability across applicable tiers, not blanket free availability. No competitor app installation, inference-accuracy benchmark, account/mandatory-cloud claim or lifetime cost estimate was performed. Long buffer capacity is not the same as the delay setting; do not advertise C's possible 30-minute buffer as its guaranteed delay.
+
+The date is a fixed `<time datetime="2026-11-14">`, not a daily clock that would falsely imply a fresh check. When updating, recheck all displayed prices, product names and feature descriptions before advancing the date. Retain the purchase-screen-authoritative and plan/device-condition notes.
+
+`comparison.js` progressively enhances the table at phone widths: Ghostform stays beside the selected A/B/C column, with ordinary labeled buttons and `aria-pressed`. Desktop shows all apps. With JS unavailable, all data remains in the horizontally scrollable table; no essential content is script-generated. Source links for competitors deliberately omit `data-store-link`, so the existing campaign resolver and Ghostform-only store-click measurement do not rewrite/count them as Ghostform downloads. The Ghostform source link retains its issued campaign tokens.
+
+Verify A/B/C switching and keyboard activation at 320/390px, all columns above 760px, the no-JS fallback and source disclosure. Source/browser evidence stays outside the public repo in `../../outputs/ghostform-app-comparison/`.
