@@ -9,4 +9,4 @@
 - See `README.md` for publication and verification. Changes on `main` publish automatically; inspect the diff before pushing.
 
 - Website measurement definitions and operator procedure live in `docs/measurement.md`. Keep native-app tracking separate. Respect privacy signals/opt-out, and never send video or IP/UA/referrer fields in the allowlisted payload.
-- Use `gf_qa=1` for browser verification and QA payloads for API checks; exclude them from live totals. Keep every analytics result/log outside this public repo. Weekly reporting uses the existing authenticated CLI with aggregate SELECTs, not a public report endpoint or new API keys.
+- Use `gf_qa=1` for browser verification and QA payloads for API checks; exclude them from live totals. Keep every analytics result/log outside this public repo. Weekly reporting uses the private cloud reporting repository and its narrowly scoped GitHub OIDC aggregate reader, with the authenticated CLI as a manual fallback. Never expose an anonymous report endpoint or add permanent API keys for this workflow.

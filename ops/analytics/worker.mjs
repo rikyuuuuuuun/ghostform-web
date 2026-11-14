@@ -1,4 +1,7 @@
 import { validMessage } from '../../metrics-core.mjs';
+import {oidcVerifier} from './report-auth.mjs';
+import {weeklyReport} from './weekly-report.mjs';
+const verifyReportIdentity=oidcVerifier();
 
 const ORIGIN='https://rikyuuuuuuun.github.io';
 const LOCAL=new Set(['http://127.0.0.1:8901','http://127.0.0.1:8902']);
@@ -26,6 +29,14 @@ export default {
   async fetch(request,env) {
     const path=new URL(request.url).pathname,origin=request.headers.get('Origin');
     if(path==='/health' && request.method==='GET') return Response.json({ok:true,version:1},{headers:{'Cache-Control':'no-store'}});
+    if(path==='/weekly-report') {
+      if(request.method!=='GET')return response(405);
+      try {await verifyReportIdentity(request.headers.get('Authorization'));}
+      catch(error){return error.message==='identity_unavailable'?
+        Response.json({status:'unavailable',counts:null,reason:'identity_unavailable'},{status:503,headers:{'Cache-Control':'no-store'}}):response(401);}
+      try{return Response.json(await weeklyReport(env.DB),{headers:{'Cache-Control':'no-store'}});}
+      catch{return Response.json({status:'unavailable',counts:null,reason:'aggregate_unavailable'},{status:503,headers:{'Cache-Control':'no-store'}});}
+    }
     if(path!=='/collect') return response(404);
     if(origin!==ORIGIN && !LOCAL.has(origin)) return response(403);
     if(request.method==='OPTIONS') return response(204,origin);
