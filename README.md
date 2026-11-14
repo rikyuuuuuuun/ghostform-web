@@ -56,3 +56,7 @@ See [docs/browser-trial.md](docs/browser-trial.md) for media provenance, renderi
 ## Website measurement — 2026-11-14
 
 `metrics.mjs` adds cookie-free, 30-minute visit measurement to the homepage and browser sample. The website-specific policy and opt-out are in `privacy.html`; this intentionally updates the former blanket no-analytics wording, while native-app data behavior is unchanged. See [docs/measurement.md](docs/measurement.md) for exact definitions, exclusions, private weekly aggregation and verification. App Store clicks must never be reported as downloads. Raw/aggregate analytics output belongs outside this public repo. Operator dependencies are pinned in `ops/analytics/`; no credentials are committed.
+
+## Pricing — 2026-11-14
+
+Pricing content and its verification basis are documented in [docs/pricing.md](docs/pricing.md). The homepage section sits between first-use steps and FAQ. Keep its dated Japanese price and app limits current; do not infer a reference normal price or bypass the issued store links.

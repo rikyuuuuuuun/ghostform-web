@@ -102,6 +102,7 @@ const finalDownload = document.querySelector('.closing [data-store-link]');
 if (mobileDownload && firstDownload && finalDownload) {
   const phoneLayout = matchMedia('(max-width: 760px)');
   const videos = [...document.querySelectorAll('.feature-film video')];
+  const pricingDownloads = [...document.querySelectorAll('#pricing [data-store-link]')];
   const inView = element => {
     const bounds = element.getBoundingClientRect();
     return bounds.bottom > 0 && bounds.top < innerHeight;
@@ -110,10 +111,11 @@ if (mobileDownload && firstDownload && finalDownload) {
     mobileDownload.hidden = !phoneLayout.matches
       || firstDownload.getBoundingClientRect().bottom > 0
       || inView(finalDownload)
+      || pricingDownloads.some(inView)
       || videos.some(inView);
   };
   const observer = new IntersectionObserver(updateDownload, {threshold: [0, 0.01, 1]});
-  [firstDownload, finalDownload, ...videos].forEach(element => observer.observe(element));
+  [firstDownload, finalDownload, ...pricingDownloads, ...videos].forEach(element => observer.observe(element));
   phoneLayout.addEventListener('change', updateDownload);
   window.addEventListener('resize', updateDownload, {passive: true});
   updateDownload();
