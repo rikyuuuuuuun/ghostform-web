@@ -1,0 +1,14 @@
+{
+  "name": "ghostform-web-funnel",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-11-01",
+  "workers_dev": true,
+  "preview_urls": false,
+  "observability": { "enabled": false },
+  "d1_databases": [{ "binding":"DB", "database_name":"ghostform-web-funnel", "database_id":"5c39257d-1bae-4e20-b40d-6ef607c078c4" }],
+  "ratelimits": [
+    {"name":"SESSION_LIMIT","namespace_id":"683165634701","simple":{"limit":30,"period":60}},
+    {"name":"GLOBAL_LIMIT","namespace_id":"683165634702","simple":{"limit":3000,"period":60}}
+  ],
+  "triggers": { "crons": ["17 3 * * *"] }
+}

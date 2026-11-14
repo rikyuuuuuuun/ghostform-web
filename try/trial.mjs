@@ -9,6 +9,7 @@ let loadAttempt = 0;
 const completed = new Set();
 
 function mark(task) {
+  window.GhostformMetrics?.record(task==='mix'?'opacity':task==='step'?'step':'view');
   completed.add(task);
   $(`#task-${task} .done`).hidden = false;
   if (completed.size === 3) $('#download-message').textContent = '見つけた違いを、自分の練習でも';
@@ -153,11 +154,13 @@ async function load() {
     sheets = images; state.ready = true; $('#stage').setAttribute('aria-busy', 'false');
     canvas.setAttribute('aria-disabled', 'false');
     $('#loading').hidden = true; $('#stage-mode').hidden = false; $('#controls').disabled = false;
+    window.GhostformMetrics?.record('ready');
     resize(); announce('サンプルの準備ができました。濃さやコマ送りを試せます');
   } catch {
     if (attempt !== loadAttempt) return;
     ++loadAttempt; // Late successes from this failed batch must not replace the error state.
     $('#stage').setAttribute('aria-busy', 'false'); $('#load-progress').hidden = true;
+    window.GhostformMetrics?.record('error');
     $('#load-message').textContent = 'サンプルを読み込めませんでした'; $('#retry').hidden = false; $('#film-fallback').hidden = false;
   }
 }

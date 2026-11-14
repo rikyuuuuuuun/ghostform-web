@@ -37,4 +37,4 @@ Current browser evidence is outside the public repo at `../../outputs/ghostform-
 
 Publication uses the existing main/Pages workflow. Confirm the matching deployment SHA, public module MIME/asset responses, homepage trial link, sample interaction, campaign continuity and a real App Store click. Keep confirmed redirect/catalog state separate from an Apple page-rendering error or actual download attribution.
 
-To roll back, revert the trial commit rather than rewriting shared history. Do not delete native-app user data. The trial writes no localStorage/IndexedDB state.
+To roll back, revert the trial commit rather than rewriting shared history. Do not delete native-app user data. The trial writes no video state to localStorage/IndexedDB. Website measurement uses the separate short-lived session and opt-out settings described in `measurement.md`.

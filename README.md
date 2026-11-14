@@ -29,7 +29,7 @@ For feature-film updates, verify portrait widths of 320px and 390px, landscape a
 
 Mobile conversion: the hero has direct comparison/delay links, and both feature stories end with a download action. The phone-only download bar appears after the first main download button has scrolled away; it hides when either video or the closing download action is visible, and in short landscape layouts. Keep its safe-area padding and the page's matching bottom clearance. All new download links must retain `data-store-link` and the issued Japanese fallback URL so source campaigns continue to apply.
 
-The `大きく見る` action opens a native HTML dialog and moves the existing video into it; closing restores the same player and playback position. Do not duplicate the video element or restart it. Check open/close during playback, focus returning to the expand button, the other video's automatic pause, and native/direct-link fallbacks. The dialog uses the page viewport rather than relying on browser fullscreen behavior. Privacy-page changes add only a home link and wrapping; preserve the policy wording.
+The `大きく見る` action opens a native HTML dialog and moves the existing video into it; closing restores the same player and playback position. Do not duplicate the video element or restart it. Check open/close during playback, focus returning to the expand button, the other video's automatic pause, and native/direct-link fallbacks. The dialog uses the page viewport rather than relying on browser fullscreen behavior. Preserve the native-app privacy wording when changing unrelated layout; website measurement is separately documented below.
 
 Keep Japanese headings, short labels and calls to action free of unnecessary `。`. Complete explanatory sentences can retain normal punctuation.
 
@@ -52,3 +52,7 @@ The feature-film posters now use frames from the existing browser-operation reco
 `try/` is a sample-only, browser-local comparison experience linked from the hero and comparison introduction. It supports overlay, independent opacity, frame stepping/holding, scrubbing, play/pause, speed and side-by-side. No camera permission or signup is required. The same source footage is intentionally shifted by 0.5 seconds; this is disclosed rather than presented as real improvement. Personal-video use remains in the iPhone app.
 
 See [docs/browser-trial.md](docs/browser-trial.md) for media provenance, rendering, regeneration, browser QA and rollback. Run `node --test tests/trial.test.mjs tests/campaign.test.mjs` plus JS syntax checks. Retain known campaign sources across homepage/trial/home links via `data-site-link`; all App Store actions use `data-store-link`. Do not invent campaign IDs.
+
+## Website measurement — 2026-11-14
+
+`metrics.mjs` adds cookie-free, 30-minute visit measurement to the homepage and browser sample. The website-specific policy and opt-out are in `privacy.html`; this intentionally updates the former blanket no-analytics wording, while native-app data behavior is unchanged. See [docs/measurement.md](docs/measurement.md) for exact definitions, exclusions, private weekly aggregation and verification. App Store clicks must never be reported as downloads. Raw/aggregate analytics output belongs outside this public repo. Operator dependencies are pinned in `ops/analytics/`; no credentials are committed.
