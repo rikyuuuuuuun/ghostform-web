@@ -227,3 +227,8 @@ h2{font-size:clamp(28px,5vw,65px)}
 .poster-pair span:first-child{color:var(--orange)}.poster-pair span:last-child{color:var(--cyan)}
 @media(max-width:760px){.hero-foot{display:none}.film-cover{padding:16px}.film-cover h4{font-size:20px}.film-cover>p{margin-bottom:6px}.film-cover h4{margin-bottom:4px}.poster-pair{font-size:12px}}
 @media(max-width:360px){.film-cover{padding:12px}.film-cover h4{font-size:18px}.film-cover>p{margin-bottom:4px}}
+
+/* A distinct hands-on sample route, separate from the recorded film. */
+.browser-entry{display:flex;align-items:center;justify-content:center;gap:10px;min-height:44px;width:fit-content;margin:8px auto 0;color:var(--cyan);font-size:13px;text-underline-offset:4px}.browser-entry img{filter:invert(1)}
+.trial-entry{margin-top:26px}.button-trial{border:1px solid var(--cyan);background:transparent;color:var(--cyan);min-height:54px}.button-trial img{filter:invert(1)}.button-trial:hover{background:#0e303a}.trial-entry>p{font-size:12px;color:var(--secondary);line-height:1.8;margin:10px 0 0}
+@media(max-width:760px){.browser-entry{font-size:13px;margin-top:8px}.trial-entry{margin-top:22px}.button-trial{width:100%;font-size:16px}.trial-entry>p{font-size:13px}}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b0d11">
+  <title>ブラウザで試す｜Ghostform</title>
+  <meta name="description" content="サンプル動画で、重ねる・濃さ調整・コマ送りを体験。登録不要でスマホからGhostformのフォーム比較を試せます。">
+  <link rel="canonical" href="https://rikyuuuuuuun.github.io/ghostform-web/try/">
+  <link rel="icon" href="../assets/app-icon.jpg">
+  <link rel="stylesheet" href="trial.css?v=20261114-1">
+  <script src="../store-links.js?v=20261114-1" defer></script>
+  <script type="module" src="trial.mjs?v=20261114-1"></script>
+  <noscript><style>.stage,#controls{display:none!important}</style></noscript>
+</head>
+<body>
+  <a class="skip" href="#controls">操作へ移動</a>
+  <header class="app-header">
+    <a href="../" data-site-link class="brand" aria-label="Ghostform 公式サイトへ"><img src="../assets/app-icon.jpg" width="32" height="32" alt=""><span>GHOSTFORM</span></a>
+    <span class="trial-label">ブラウザ体験</span>
+    <a class="home" href="../" data-site-link>公式サイトへ <span aria-hidden="true">↗</span></a>
+  </header>
+  <main>
+    <div class="intro"><div><p class="eyebrow">サンプル専用・登録不要</p><h1>重ねて、違いを見つけよう</h1></div><p class="intro-help" id="intro-help">濃さを動かす → 止める → 1コマずつ</p></div>
+    <div class="experience">
+      <section class="player" aria-label="サンプル動画の比較">
+        <div class="view-bar"><div class="legend"><span class="teacher">● お手本</span><span class="student">● 練習</span></div><span class="sample-label">操作用サンプル</span></div>
+        <div class="stage" id="stage" aria-busy="true">
+          <canvas id="comparison" width="720" height="720" role="button" aria-label="重ねたプレビュー、押すと再生・停止" aria-pressed="false" aria-disabled="true" aria-describedby="canvas-help" tabindex="0"></canvas>
+          <span id="canvas-help" class="sr-only">スペースキーで再生と停止、左右の矢印キーでコマ送り</span>
+          <div class="stage-message" id="loading"><span class="loading-mark" aria-hidden="true"></span><p id="load-message" role="status">サンプルを準備中</p><progress id="load-progress" max="3" value="0" aria-label="サンプルの読み込み"></progress><button id="retry" type="button" hidden>もう一度読み込む</button><a href="../#compare" data-site-link id="film-fallback" hidden>実演動画を見る</a></div>
+          <span class="stage-mode" id="stage-mode" hidden>半透明で重ねて比較</span>
+          <div class="stage-empty" id="stage-empty" hidden>下の濃さを上げると<br>映像が見えます</div>
+          <div class="side-labels" id="side-labels" hidden aria-hidden="true"><span>お手本</span><span>練習</span></div>
+        </div>
+        <fieldset id="controls" disabled aria-describedby="intro-help">
+          <legend class="sr-only">比較の操作</legend>
+          <div class="modes" role="group" aria-label="表示方法"><button type="button" data-mode="overlay" aria-pressed="true">重ねる</button><button type="button" data-mode="side" aria-pressed="false">並べる</button></div>
+          <div class="play-bar">
+            <div class="scrub-meta"><output id="time">1.50<small>秒</small></output><span id="frame">F37 / 96</span><span>/ 4.00秒</span></div>
+            <input type="range" id="scrub" min="0" max="95" step="1" value="36" aria-label="再生位置" aria-valuetext="1.50秒、37コマ目">
+            <div class="transport"><button type="button" class="speed" id="speed" aria-label="再生速度を変更">0.5×</button><div class="transport-main"><button type="button" id="prev" class="step" aria-label="1コマ戻る"><span aria-hidden="true">−1F</span></button><button type="button" id="play" class="play" aria-label="再生"><img id="play-icon" src="../assets/play-fill.svg" width="24" height="24" alt=""></button><button type="button" id="next" class="step" aria-label="1コマ進む"><span aria-hidden="true">+1F</span></button></div><button type="button" id="reset" class="reset" aria-label="最初の設定に戻す">↺</button></div>
+          </div>
+          <div class="mix-controls"><div class="mix-heading"><strong>重ねる濃さ</strong><span>薄くすると、もう一方が見えます</span></div><div class="mix-row teacher"><label for="teacher-opacity">● お手本</label><input type="range" id="teacher-opacity" min="0" max="100" value="100" step="1"><output for="teacher-opacity" id="teacher-value">100%</output></div><div class="mix-row student"><label for="student-opacity">● 練習</label><input type="range" id="student-opacity" min="0" max="100" value="100" step="1"><output for="student-opacity" id="student-value">100%</output></div><p id="mix-help">2本の濃さを調整して、位置の違いを見つけてみてください</p></div>
+        </fieldset>
+        <noscript><p class="noscript">操作体験にはJavaScriptが必要です。<a href="../assets/video/compare-practice-v2.mp4">実演動画を見る</a></p></noscript>
+        <p id="announcement" class="sr-only" role="status" aria-live="polite"></p>
+      </section>
+      <aside class="guide" aria-label="試し方とダウンロード">
+        <div class="guide-content"><p class="eyebrow">TRY IT</p><h2>まずは、ひとつ<br class="desktop-break">違いを見つける</h2><ol class="try-steps"><li id="task-mix"><span class="step-number">01</span><div><strong>濃さを変える</strong><p>片方を薄くして、手足の位置を見る</p></div><span class="done" hidden aria-label="体験済み">✓</span></li><li id="task-pause"><span class="step-number">02</span><div><strong>動かして、止める</strong><p>再生ボタンでもう一度止められます</p></div><span class="done" hidden aria-label="体験済み">✓</span></li><li id="task-step"><span class="step-number">03</span><div><strong>1コマずつ確かめる</strong><p>−1F・+1Fで、少しずつ見比べる</p></div><span class="done" hidden aria-label="体験済み">✓</span></li></ol></div>
+        <div class="download-card"><p id="download-message">次は、自分の動画で</p><a class="download" data-store-link href="https://apps.apple.com/jp/app/id6831656347?pt=129755185&amp;ct=gf_web_202611&amp;mt=8">iPhoneで無料ダウンロード <span aria-hidden="true">↗</span></a><small>iOS 16.0以降 ／ 広告・アプリ内購入あり</small><p class="download-detail">お手本との比較も、前回と今回の見比べも<br>自分の動画はiPhoneアプリで使えます</p></div>
+      </aside>
+    </div>
+    <footer class="sample-notes"><p>同じ映像を0.5秒ずらした操作用サンプルです<br class="mobile-break">上達の前後を示したものではありません</p><details><summary>サンプルについて</summary><p>約4秒・24fpsの映像で、比較・濃さ調整・コマ送りを体験できます。サンプルは無音です。表示はこのページ内だけで完結し、動画の取り込みやカメラ撮影は行いません。</p><p>サンプル映像：<a href="https://www.pexels.com/video/woman-lifting-weights-while-squating-8893521/">Jill Burrow / Pexels</a>（切り抜き・縮小・コマ画像への変換）。<a href="https://www.pexels.com/license/">Pexelsライセンス</a></p></details><a href="../" data-site-link>Ghostformの機能をもっと見る <span aria-hidden="true">↗</span></a></footer>
+  </main>
+</body>
+</html>

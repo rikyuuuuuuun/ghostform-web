@@ -99,3 +99,15 @@ Local CUA checks: 320×740, 390×844, 844×390 and 1440×900. No horizontal page
 Preservation: original hero/sport/practice images and MP4s are unchanged from dde0015; store-links.js, support.html, privacy.html and sitemap.xml are unchanged. Browser demo feasibility was inspected read-only; no public web-app trial or native/3D change is included.
 
 External limit on this run: actual default and X-campaign clicks reached Apple's Japanese storefront; the X link redirected to the Ghostform product slug with the issued campaign/provider tokens. Apple rendered “エラーが発生しました。” in this browser, so successful product-page rendering and download completion are not confirmed for this run. Do not replace the already-issued Japanese links based on that response. Physical iPhone/Safari and acquisition uplift are unverified.
+
+## Browser sample trial — 2026-11-14
+
+User authorized implementation and official-site publication. Added a distinct hands-on entry in the hero and comparison introduction; preserved existing art, films, feature order and native-app repositories. The trial uses the app's dark interface direction, cyan/orange teacher/student labels, central play button, flanking frame steps, native range inputs and the same opacity weighting.
+
+- Real sample motion is supplied as 108 predecoded 24fps frames in three JPEG sheets (1.27MB total), with teacher/student separated by 12 source frames. Page uses no video seeks for stepping; each control renders the selected frame directly. User-facing provenance discloses the same-source time shift.
+- Local browser widths: 320×740, 390×844, 844×390 and 1440×1000. Core sliders fit the initial portrait view at 320/390; landscape places image and controls side by side. A clipped 320px transport control was found and corrected; bounds checks then found no clipped controls or horizontal page overflow.
+- Exercised opacity endpoints and both-zero hint, visually checked actual single/overlaid images, single forward/back steps, 20 consecutive steps, first/last frame limits, playback/pause, hold/release, keyboard step, split mode and reset. The same-image canvas renderer does not use native seek operations.
+- An intentionally failed sample-sheet HTTP503 showed stable failure copy, disabled controls, retry and a film fallback. Retry restored enabled controls and frame36. This failure injection exists only in a local server helper, not the published app.
+- Existing X campaign was preserved from homepage → trial → actual download click. Apple redirected to the Japanese Ghostform slug and rendered the Ghostform product title in this run. This confirms destination rendering, not a completed download or Apple attribution.
+- Node: 11 passing tests, zero failures, covering exact frame rules, all sheet bounds, app opacity math, aspect ratio and issued campaign routing. Physical iPhone/Safari and Android tests remain unverified. No claim of measured mobile latency or acquisition uplift.
+- Evidence: `../../outputs/ghostform-browser-trial/`. Implementation and media details: `docs/browser-trial.md`.

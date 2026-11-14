@@ -46,3 +46,9 @@ Use a new reverting commit for an identified website change; do not force-reset 
 Applied the developer-published [unslop skill](https://github.com/heydamir/unslop/blob/main/skills/unslop/SKILL.md), created by Damir Sokolovsky (@heydamir), CC BY 4.0. This is not an OpenAI-provided skill. The approved scope retains the hero, all sport photographs, accent colors, display type and section order.
 
 The feature-film posters now use frames from the existing browser-operation recordings (comparison at 6 seconds, delay at 8 seconds). Editable HTML titles cover the original film heading area until playback starts. The actual operation frames and provenance are retained; these are not generated app screens or iPhone recordings. The original posters and unchanged MP4s remain available for recovery. The hero artwork is static; there is no animation-pause control. See `design-qa.md` for checks and external-service limits.
+
+## Hands-on browser trial — 2026-11-14
+
+`try/` is a sample-only, browser-local comparison experience linked from the hero and comparison introduction. It supports overlay, independent opacity, frame stepping/holding, scrubbing, play/pause, speed and side-by-side. No camera permission or signup is required. The same source footage is intentionally shifted by 0.5 seconds; this is disclosed rather than presented as real improvement. Personal-video use remains in the iPhone app.
+
+See [docs/browser-trial.md](docs/browser-trial.md) for media provenance, rendering, regeneration, browser QA and rollback. Run `node --test tests/trial.test.mjs tests/campaign.test.mjs` plus JS syntax checks. Retain known campaign sources across homepage/trial/home links via `data-site-link`; all App Store actions use `data-store-link`. Do not invent campaign IDs.

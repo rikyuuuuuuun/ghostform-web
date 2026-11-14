@@ -13,3 +13,14 @@ const ghostformSource = new URLSearchParams(location.search).get('from');
 const ghostformDestination = Object.hasOwn(ghostformStoreLinks, ghostformSource)
   ? ghostformStoreLinks[ghostformSource] : ghostformStoreLinks.default;
 document.querySelectorAll('[data-store-link]').forEach(link => { link.href = ghostformDestination; });
+
+// Keep an existing campaign when entering the browser trial or returning home.
+// Accept only known source names; do not carry arbitrary query parameters.
+if (Object.hasOwn(ghostformStoreLinks, ghostformSource)) {
+  document.querySelectorAll('[data-site-link]').forEach(link => {
+    const destination = new URL(link.href, location.href);
+    if (destination.origin !== location.origin) return;
+    destination.searchParams.set('from', ghostformSource);
+    link.href = destination.href;
+  });
+}
