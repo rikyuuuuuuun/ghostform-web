@@ -9,7 +9,7 @@ This is a buildless GitHub Pages website. Publishing uses the existing `main` br
 - `index.html`: product introduction, use cases, first-use instructions, download links, canonical URL and Search Console verification.
 - `support.html` and `privacy.html`: existing support/privacy URLs, retained for the app listing.
 - `store-links.js`: Apple-issued campaign tokens on the explicit Japanese product URL. `?from=x`, `instagram`, `tiktok`, `note`, or `coach` selects a source. Unknown values use the website campaign. Regionless `/app/apple-store/` links reproduced a US not-found page; retain `/jp/app/` in JS, HTML fallbacks and support links.
-- `site.js`: presentation motion pause, product-screenshot choices and tap-to-play feature films. Starting one film pauses the other. Native video controls, explanatory copy and download fallbacks remain accessible without JavaScript.
+- `site.js`: product-screenshot choices and tap-to-play feature films. Starting one film pauses the other. Native video controls, explanatory copy and download fallbacks remain accessible without JavaScript.
 - `sitemap.xml`: homepage and support page.
 - `assets/`: original official icon and current App Store marketing screenshots, obtained from the product's public catalog response. The 600px copies are web assets, not store-submission originals.
 - `assets/athlete-hero.png`: AI-generated promotional artwork, not an inference result or app screenshot. The athlete is deliberately independent of a particular sport. Keep the artwork behind the headline and clipped inside `.hero-stage` so feet never cover the Japanese heading.
@@ -40,3 +40,9 @@ For indexing, use the verified Search Console property for the exact public pref
 ## Recovery
 
 Use a new reverting commit for an identified website change; do not force-reset shared history. The pre-landing-page head was `7d388fed9dddf09c08af6e09290fba4590ab9453`. Preserve the verification tag and existing support/privacy pages when reverting unrelated design changes.
+
+## Unslop polish — 2026-11-14
+
+Applied the developer-published [unslop skill](https://github.com/heydamir/unslop/blob/main/skills/unslop/SKILL.md), created by Damir Sokolovsky (@heydamir), CC BY 4.0. This is not an OpenAI-provided skill. The approved scope retains the hero, all sport photographs, accent colors, display type and section order.
+
+The feature-film posters now use frames from the existing browser-operation recordings (comparison at 6 seconds, delay at 8 seconds). Editable HTML titles cover the original film heading area until playback starts. The actual operation frames and provenance are retained; these are not generated app screens or iPhone recordings. The original posters and unchanged MP4s remain available for recovery. The hero artwork is static; there is no animation-pause control. See `design-qa.md` for checks and external-service limits.

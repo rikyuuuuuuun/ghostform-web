@@ -76,3 +76,26 @@ Current-run screenshots and reports: `../../outputs/ghostform-mobile-audit/`. Th
 - Auxiliary pages: inspected support and privacy on the current public site. Support already has a readable layout and home link. Privacy lacked a return path; added a 44px home link and long-link wrapping, without changing policy text.
 - Local verification: 320×740, 390×844, 844×390, 1440×900. No horizontal page overflow in these checks. At 320px, corrected a download label breaking onto a final single character. Opening/closing the video dialog, the FAQ, direct feature anchors, privacy return path, the bar's hide/show conditions and video mutual pause were exercised. Source checks preserve ownership, canonical/schema, campaign tokens, support and sitemap; local references and JavaScript syntax pass.
 - Limits: these are desktop-browser viewport and playback checks, not physical iPhone/Safari, screen-reader or full WCAG certification. No acquisition/conversion uplift, search-ranking improvement or actual download attribution is claimed. The App Store emitted a client-logger warning; no local-site console error was observed.
+
+## Approved Unslop polish — 2026-11-14
+
+Source: [unslop](https://github.com/heydamir/unslop/blob/main/skills/unslop/SKILL.md), by Damir Sokolovsky (@heydamir), CC BY 4.0. Used the developer original, not an OpenAI-provided skill. Audit, source snapshot, measurements and screenshots: `../../outputs/ghostform-unslop-2026-11-14/`. User approved implementation and publication before editing.
+
+Direction: strong, straightforward practice review. Preserve the female athlete hero, every sport photograph, black/cyan/orange, display headings and section order. No image regeneration was needed; the product recordings supply more useful poster imagery.
+
+The nine passes were applied in order:
+1. Spacing: normalized scoped card padding, feature gaps and label clearance.
+2. Color: grouped supporting text into secondary/muted roles; retained accents and inverse colors.
+3. Icons: downward arrows for in-page anchors; external/store diagonal arrows retained.
+4. Copy: shortened comparison/delay steps and six-sport descriptions; rewrote the joined desktop delay heading. Short labels omit unnecessary Japanese full stops.
+5. Type: retained display fonts; reduced auxiliary tracking/capitalization and limited UI weight variation.
+6. Layout: moved film play buttons below the operation image, above native controls; retained mobile/desktop order and all sport images.
+7. Details: 12px mobile-bar disclosure, safe-area clearance and existing focus/native-control behavior retained.
+8. Visuals: real operation frames plus editable HTML headings until playback, without generating app UI.
+9. Motion: removed the repeating hero drift and its redundant pause control; kept only brief interaction feedback.
+
+Local CUA checks: 320×740, 390×844, 844×390 and 1440×900. No horizontal page overflow. Poster headings fit their header areas at 320px and PC widths; the operation image remains unobstructed. Phone bar disclosure is 12px and the bar hides around video / short landscape. Comparison playback advanced normally; opening/closing the dialog retained the same video (two total players) and playback time, returning focus to the opener. Starting delay paused comparison and hid its poster heading. FAQ expansion and screenshot selection worked. No local-site console errors were observed. Source checks pass for references, unique IDs, JS syntax, ownership, canonical/schema, issued campaign tokens, support/privacy/sitemap, eight practice cards, inline videos and absence of autoplay/preload.
+
+Preservation: original hero/sport/practice images and MP4s are unchanged from dde0015; store-links.js, support.html, privacy.html and sitemap.xml are unchanged. Browser demo feasibility was inspected read-only; no public web-app trial or native/3D change is included.
+
+External limit on this run: actual default and X-campaign clicks reached Apple's Japanese storefront; the X link redirected to the Ghostform product slug with the issued campaign/provider tokens. Apple rendered “エラーが発生しました。” in this browser, so successful product-page rendering and download completion are not confirmed for this run. Do not replace the already-issued Japanese links based on that response. Physical iPhone/Safari and acquisition uplift are unverified.

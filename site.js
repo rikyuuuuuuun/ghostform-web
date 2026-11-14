@@ -1,15 +1,4 @@
 // Presentation only: no tracking SDK, cookies or video inference.
-const motionToggle = document.querySelector('.motion-toggle');
-if (motionToggle && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  motionToggle.hidden = false;
-  motionToggle.addEventListener('click', () => {
-    const paused = motionToggle.getAttribute('aria-pressed') !== 'true';
-    document.documentElement.classList.toggle('motion-paused', paused);
-    motionToggle.setAttribute('aria-pressed', String(paused));
-    motionToggle.querySelector('span').textContent = paused ? '演出を再開' : '演出を停止';
-    motionToggle.querySelector('img').src = paused ? 'assets/play-fill.svg' : 'assets/pause-fill.svg';
-  });
-}
 const comparisonScreen = document.querySelector('#comparison-screen');
 const description = document.querySelector('.screen-description');
 const screenChoices = {
@@ -35,6 +24,8 @@ document.querySelectorAll('[data-play-film]').forEach(button => {
   const video = document.getElementById(button.dataset.playFilm);
   if (!video) return;
   const status = button.closest('figure').querySelector('.film-status');
+  const cover = button.closest('figure').querySelector('.film-cover');
+  if (cover) cover.hidden = false;
   button.hidden = false;
   button.addEventListener('click', () => {
     if (video.ended) video.currentTime = 0;
@@ -46,6 +37,7 @@ document.querySelectorAll('[data-play-film]').forEach(button => {
   });
   video.addEventListener('playing', () => {
     button.hidden = true;
+    if (cover) cover.hidden = true;
     document.querySelectorAll('#compare-film, #delay-film').forEach(other => {
       if (other !== video && !other.paused) other.pause();
     });
