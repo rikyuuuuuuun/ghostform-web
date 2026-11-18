@@ -24,8 +24,6 @@ document.querySelectorAll('[data-play-film]').forEach(button => {
   const video = document.getElementById(button.dataset.playFilm);
   if (!video) return;
   const status = button.closest('figure').querySelector('.film-status');
-  const cover = button.closest('figure').querySelector('.film-cover');
-  if (cover) cover.hidden = false;
   button.hidden = false;
   button.addEventListener('click', () => {
     if (video.ended) video.currentTime = 0;
@@ -37,7 +35,6 @@ document.querySelectorAll('[data-play-film]').forEach(button => {
   });
   video.addEventListener('playing', () => {
     button.hidden = true;
-    if (cover) cover.hidden = true;
     document.querySelectorAll('#compare-film, #delay-film').forEach(other => {
       if (other !== video && !other.paused) other.pause();
     });
@@ -55,6 +52,31 @@ document.querySelectorAll('[data-play-film]').forEach(button => {
     if (status) status.textContent = '動画を読み込めませんでした。「動画を直接開く」もお試しください。';
   });
 });
+
+// Pause the demo when its instructions are folded away.
+document.querySelectorAll('.feature-detail').forEach(detail => {
+  detail.addEventListener('toggle', () => {
+    if (!detail.open) detail.querySelector('video')?.pause();
+  });
+});
+
+// Existing shared links can point to instructions now inside a disclosure.
+function revealLinkedDetails() {
+  const target = document.getElementById(location.hash.slice(1));
+  if (!target) return;
+  let detail = target.closest('details');
+  let opened = false;
+  while (detail) {
+    if (!detail.open) {
+      detail.open = true;
+      opened = true;
+    }
+    detail = detail.parentElement?.closest('details');
+  }
+  if (opened) target.scrollIntoView();
+}
+revealLinkedDetails();
+window.addEventListener('hashchange', revealLinkedDetails);
 
 // Expand the same video in a modal; no duplicate player or second download.
 const filmDialog = document.querySelector('.film-dialog');
@@ -99,11 +121,12 @@ document.querySelectorAll('[data-expand-film]').forEach(button => {
 const mobileDownload = document.querySelector('.mobile-download');
 const firstDownload = document.querySelector('.button-hero');
 const finalDownload = document.querySelector('.closing [data-store-link]');
-if (mobileDownload && firstDownload && finalDownload) {
+if (mobileDownload && firstDownload && finalDownload && 'IntersectionObserver' in window) {
   const phoneLayout = matchMedia('(max-width: 760px)');
   const videos = [...document.querySelectorAll('.feature-film video')];
-  const pricingDownloads = [...document.querySelectorAll('#pricing [data-store-link]')];
+  const nearbyActions = [...document.querySelectorAll('.feature-download, footer, #app-comparison')];
   const inView = element => {
+    if (element.closest('details:not([open])')) return false;
     const bounds = element.getBoundingClientRect();
     return bounds.bottom > 0 && bounds.top < innerHeight;
   };
@@ -111,12 +134,13 @@ if (mobileDownload && firstDownload && finalDownload) {
     mobileDownload.hidden = !phoneLayout.matches
       || firstDownload.getBoundingClientRect().bottom > 0
       || inView(finalDownload)
-      || pricingDownloads.some(inView)
+      || nearbyActions.some(inView)
       || videos.some(inView);
   };
   const observer = new IntersectionObserver(updateDownload, {threshold: [0, 0.01, 1]});
-  [firstDownload, finalDownload, ...pricingDownloads, ...videos].forEach(element => observer.observe(element));
+  [firstDownload, finalDownload, ...nearbyActions, ...videos].forEach(element => observer.observe(element));
   phoneLayout.addEventListener('change', updateDownload);
+  document.addEventListener('toggle', updateDownload, true);
   window.addEventListener('resize', updateDownload, {passive: true});
   updateDownload();
 }

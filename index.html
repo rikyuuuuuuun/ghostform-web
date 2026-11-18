@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <title>Ghostform（ゴーストフォーム）｜フォーム比較・ディレイ再生</title>
   <meta name="description" content="重ね比較・AI骨格表示・3〜10秒のディレイ再生が無料。ゴルフ・野球・体操・ダンスなどのフォーム確認に使えるiPhoneアプリ、Ghostform。PROは買い切り、月額・年額サブスクなし。広告・アプリ内購入あり。">
   <meta name="robots" content="index,follow">
@@ -19,224 +19,170 @@
   <meta property="og:image:width" content="1536">
   <meta property="og:image:height" content="1024">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="preload" href="assets/display.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/athlete-hero.jpg" as="image">
-  <link rel="stylesheet" href="styles.css?v=20261114-5">
+  <link rel="stylesheet" href="styles.css?v=20261118">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Ghostform（ゴーストフォーム）","applicationCategory":"SportsApplication","operatingSystem":"iOS 16.0以降","url":"https://rikyuuuuuuun.github.io/ghostform-web/","installUrl":"https://apps.apple.com/jp/app/id6831656347","image":"https://rikyuuuuuuun.github.io/ghostform-web/assets/app-icon.jpg","description":"動画を重ねるフォーム比較とディレイ再生。ゴルフ・野球・体操・ダンスなどの練習を振り返るiPhoneアプリ。","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY","description":"無料ダウンロード。広告・アプリ内購入あり。"}}</script>
   <script type="module" src="metrics.mjs?v=20261114-1"></script>
 </head>
 <body>
   <a class="skip" href="#main">本文へ移動</a>
-  <header class="site-header wrap">
-    <a class="brand" href="./" aria-label="Ghostform ホーム"><img src="assets/app-icon.jpg" alt="" width="44" height="44"><span>GHOSTFORM</span></a>
-    <nav aria-label="メインナビゲーション"><a href="#compare">できること</a><a href="#sports">活用シーン</a><a href="#pricing">料金</a><a href="support.html">サポート</a></nav>
-    <a class="button button-small" data-store-link href="https://apps.apple.com/jp/app/id6831656347?pt=129755185&amp;ct=gf_web_202611&amp;mt=8"><span class="desktop-label">iPhoneでダウンロード</span><span class="mobile-label">無料ダウンロード</span><img src="assets/arrow-up-right.svg" alt="" width="18" height="18"></a>
-  </header>
+  <header class="site-header"><div class="wrap header-inner"><a class="brand" href="./" aria-label="Ghostform ホーム"><img src="assets/app-icon.jpg" alt="" width="34" height="34"><span>GHOSTFORM</span></a>
+    <nav aria-label="ページ内ナビゲーション"><a class="comparison-nav" href="#app-comparison">他社比較</a><a href="#features">使い方</a><a href="#pricing">料金</a><a class="wide-nav" href="#sports">競技別の活用例</a></nav>
+    <a class="header-trial" href="try/" data-site-link>ブラウザで試す<span aria-hidden="true">↗</span></a>
+  </div></header>
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-stage wrap">
-        <img class="hero-art" src="assets/athlete-hero.jpg" alt="" width="1536" height="1024" fetchpriority="high">
-        <h1 id="hero-title" class="hero-title" lang="en"><span class="see">SEE THE</span><span class="difference">DIFFERENCE.</span></h1>
-        <p class="hero-index" aria-hidden="true">MOTION /<br>COMPARE /<br>REPLAY /</p>
-      </div>
-      <div class="hero-bottom wrap">
-        <p class="hero-kicker">フォーム比較・ディレイ再生アプリ</p>
-        <p class="hero-jp">感覚を、目で確かめる</p>
-        <p class="hero-description">重ね比較・AI骨格表示・ディレイ再生<br><strong>フォーム確認の基本機能は無料</strong></p>
-        <a class="button button-hero" data-store-link href="https://apps.apple.com/jp/app/id6831656347?pt=129755185&amp;ct=gf_web_202611&amp;mt=8">iPhoneで無料ダウンロード<img src="assets/arrow-up-right.svg" alt="" width="24" height="24"></a>
-        <p class="fine hero-plan-note"><strong>PROは買い切り、月額・年額なし</strong><br>iOS 16.0以降 ／ 広告・アプリ内購入あり</p>
-        <a class="browser-entry" data-site-link href="try/">ダウンロード前に、ブラウザで試す<img src="assets/arrow-up-right.svg" alt="" width="18" height="18"></a>
-        <nav class="feature-jumps" aria-label="気になる使い方を見る"><a href="#compare"><span>2本を重ねて</span>フォームを比較<img src="assets/arrow-right.svg" class="arrow-page" alt="" width="18" height="18"></a><a href="#delay"><span>ひとりの練習に</span>直前を見返す<img src="assets/arrow-right.svg" class="arrow-page" alt="" width="18" height="18"></a></nav>
-        <div class="hero-foot"><span>FORM COMPARISON &amp; DELAY REPLAY</span><a href="#compare">2つの使い方を見る<img src="assets/arrow-right.svg" class="arrow-page" alt="" width="17" height="17"></a></div>
+      <div class="hero-stage">
+        <img class="hero-art" src="assets/athlete-hero.jpg" alt="" fetchpriority="high" width="1536" height="1024">
+        <div class="wrap hero-inner">
+          <p class="app-category">iPhone用フォーム比較アプリ</p>
+          <h1 id="hero-title"><span>フォームを重ねて、</span><span>違いを見る</span></h1>
+          <p class="hero-copy">お手本と自分の動画を重ねて比べる。<br>ひとりの練習では、動いた直後を見返せます。</p>
+          <div class="hero-actions"><a class="button button-hero" data-store-link href="https://apps.apple.com/jp/app/id6831656347?pt=129755185&amp;ct=gf_web_202611&amp;mt=8">iPhoneで無料ダウンロード<img src="assets/arrow-up-right.svg" alt="" width="19" height="19"></a><a class="trial-link" data-site-link href="try/">ブラウザで試す<span aria-hidden="true">→</span></a></div>
+          <p class="hero-note">登録不要 · iOS 16.0以降 · 広告とアプリ内購入あり</p>
+        </div>
       </div>
     </section>
-
-    <section id="compare" class="compare-section section" aria-labelledby="compare-title">
-      <div class="wrap feature feature-story">
-        <div class="feature-copy"><p class="eyebrow cyan">01 / Layer comparison</p><h2 id="compare-title">違いを見つけて、<br>次の一本へ</h2><p class="lead">お手本と自分、前回と今回<br>2本の動画を重ねて、<br>気になる瞬間を見比べる</p><div class="trial-entry"><a class="button button-trial" data-site-link href="try/">ブラウザで試す<img src="assets/arrow-up-right.svg" alt="" width="20" height="20"></a><p>サンプルで重ねる・濃さ調整・コマ送り<br>登録不要、そのまま操作できます</p></div></div>
-        <figure class="feature-film">
-          <div class="film-stage"><video id="compare-film" width="720" height="1280" controls playsinline preload="none" poster="assets/video/compare-operation-poster.jpg" aria-label="レイヤー比較と4競技の活用例・30秒" aria-describedby="compare-film-caption"><source src="assets/video/compare-practice-v2.mp4" type="video/mp4">動画を再生できない場合は、下のリンクからご覧ください。</video><div class="film-cover film-cover-compare" aria-hidden="true" hidden><p>レイヤー比較</p><h4>重ねて、違いを見る</h4><small>2本の動画を半透明で重ねる</small></div><button class="film-play" type="button" data-play-film="compare-film" hidden><img src="assets/play-fill.svg" alt="" width="28" height="28"><span>30秒で使い方を見る<small>音声付き</small></span></button></div>
+    <section id="app-comparison" class="section rivals" aria-labelledby="app-comparison-title"><div class="wrap">
+      <div class="rival-heading">
+        <h2 id="app-comparison-title">他社アプリとの比較</h2>
+        <p class="section-intro">Ghostformは、動画比較・AI骨格表示・ディレイ再生が無料。<br class="wide-nav">PROも一度の購入で使えます。</p>
+      </div>
+      <div class="comparison-label"><h3>有料プランの料金例</h3><p>日本のiPhone版 · <time datetime="2026-11-14">2026年11月14日</time>時点</p></div>
+      <div class="price-lineup">
+        <div class="our-price"><h4>Ghostform PRO</h4><p><b>¥680</b><span>買い切り</span></p><small>公開記念価格<br>基本機能は無料</small></div>
+        <div><h4>A社</h4><p><b>¥1,500</b><span>／月</span></p><small>Standardの月額プラン<br>14日間の体験あり</small></div>
+        <div><h4>B社</h4><p><b>¥400</b><span>／月</span></p><small>年額プランは¥4,000<br>無料利用可</small></div>
+        <div><h4>C社</h4><p><b>¥1,100</b><span>／月</span></p><small>年額例は¥3,500・¥9,000<br>購入前の利用可</small></div>
+      </div>
+      <h3 class="matrix-heading" id="matrix-heading">フォーム確認に使える機能</h3>
+      <table class="matrix" id="app-comparison-table" aria-labelledby="matrix-heading">
+        <thead><tr><th scope="col">アプリ</th><th scope="col">動画比較</th><th scope="col">ディレイ</th><th scope="col">姿勢解析</th></tr></thead>
+        <tbody>
+          <tr class="our-row"><th scope="row">Ghostform</th><td>重ねる<br>左右・上下</td><td>3〜10秒<small>PRO 60秒まで</small></td><td>2D骨格<small>端末内で解析</small></td></tr>
+          <tr><th scope="row">A社</th><td>重ねる<br>並べる</td><td>記載なし</td><td>2D骨格<small>Standard</small></td></tr>
+          <tr><th scope="row">B社</th><td>重ねる<br>並べる</td><td>対応</td><td>記載なし</td></tr>
+          <tr><th scope="row">C社</th><td>分割表示</td><td>対応</td><td>競技別の<wbr>動作解析<small>端末内で解析</small></td></tr>
+        </tbody>
+      </table>
+      <p class="matrix-note">「記載なし」は、確認した公式説明に記載がなかった項目です。機能の利用条件はプランや端末により異なります。</p>
+      <details class="comparison-sources"><summary>比較条件・出典を見る</summary><div>
+            <p>各社の日本向けApp Store掲載情報と開発元の公開情報を、上記の日付に確認しました。料金は個人向け有料プランの掲載例です。他のプラン・購入条件がある場合もあり、最新の価格や利用条件は各アプリの購入画面をご確認ください。</p>
+            <ul>
+              <li><strong>Ghostform</strong>：PRO ¥680（買い切り・公開記念価格）。<a data-store-link href="https://apps.apple.com/jp/app/id6831656347?pt=129755185&amp;ct=gf_web_202611&amp;mt=8" target="_blank" rel="noopener noreferrer">App Store掲載情報</a>と現行アプリの仕様を確認</li>
+              <li><strong>A社</strong>：Individual Standard Monthly ¥1,500、Individual Premium Monthly ¥2,500。<a href="https://apps.apple.com/jp/app/onform-%E5%8B%95%E7%94%BB%E5%88%86%E6%9E%90%E3%82%A2%E3%83%97%E3%83%AA/id1490334045" target="_blank" rel="noopener noreferrer">App Store掲載情報</a>・<a href="https://onform.com/pricing/" target="_blank" rel="noopener noreferrer">開発元のプラン説明</a>。14日間の体験があり、コーチとの動画共有やメッセージに対応。対象のコーチと利用する選手には無料の条件があります。ゴルフの3D解析はPremiumに対応</li>
+              <li><strong>B社</strong>：月額プラン ¥400、年額プラン ¥4,000。<a href="https://apps.apple.com/jp/app/skill-cam/id6788213774" target="_blank" rel="noopener noreferrer">App Store掲載情報</a>・<a href="https://www.sportlight.jp/news/2026/08/13/skill-cam/" target="_blank" rel="noopener noreferrer">開発元の機能・料金案内</a>。無料利用が可能で、動画への描画と比較動画の書き出しに対応</li>
+              <li><strong>C社</strong>：Monthly ¥1,100、Yearly ¥3,500・¥9,000。<a href="https://apps.apple.com/jp/app/video-delay-instant-replay/id1135528824" target="_blank" rel="noopener noreferrer">App Store掲載情報</a>。購入前にも利用可能。週額・無料体験付きなどのプランがあり、長時間ディレイ、外部カメラ接続や複数方向の撮影にも対応</li>
+            </ul>
+            <p>公式の掲載情報を比較したもので、各社アプリの実機テストや解析精度の比較は行っていません。</p>
+          </div></details>
+    </div></section>
+    <section class="section features" id="features" aria-labelledby="features-title"><div class="wrap">
+      <h2 id="features-title">練習で使える、2つの機能</h2>
+      <p class="section-intro">どちらも無料で使えます。</p>
+      <div class="feature-grid"><article class="feature-panel compare" id="compare" aria-labelledby="compare-title">
+          <div class="feature-intro">
+            <div class="feature-text"><p class="mode-name">フォーム比較</p>
+              <h3 id="compare-title">2本の動画を重ねる</h3><p>お手本と自分を同じ瞬間で止めて、姿勢や手足の位置を見比べます。</p>
+            </div>
+            <img class="feature-shot" src="assets/compare-preview.jpg" alt="フォーム比較のApp Store掲載画面の一部" width="140" height="148" loading="lazy">
+          </div>
+          <details class="feature-detail" id="how-to">
+            <summary>操作手順と動画を見る<span class="duration">30秒</span></summary>
+            <div class="feature-body"><ol class="instructions"><li>お手本と自分、または前回と今回の動画を選ぶ</li><li>構えや着地など、同じ瞬間にそろえる</li><li>重なりの濃さを変えたり、コマを送ったりして違いを見る</li></ol>
+              <figure class="feature-film">
+          <div class="film-stage"><video id="compare-film" width="720" height="1280" controls playsinline preload="none" poster="assets/video/compare-operation-poster.jpg" aria-label="レイヤー比較と4競技の活用例・30秒" aria-describedby="compare-film-caption"><source src="assets/video/compare-practice-v2.mp4" type="video/mp4">動画を再生できない場合は、下のリンクからご覧ください。</video><button class="film-play" type="button" data-play-film="compare-film" hidden><img src="assets/play-fill.svg" alt="" width="28" height="28"><span>30秒で使い方を見る<small>音声付き</small></span></button></div>
           <div class="film-tools"><span>30秒・音声付き</span><button type="button" data-expand-film="compare-film" hidden>大きく見る<img src="assets/arrow-up-right.svg" alt="" width="17" height="17"></button></div>
           <figcaption id="compare-film-caption">重ねる・止める・コマ送りと、4競技の使い方</figcaption><p class="film-status" aria-live="polite"></p>
           <details class="film-about"><summary>動画について・再生できないとき</summary><p>実アプリをブラウザで操作したデモです。同一素材の時刻をずらした操作例で、上達の前後を示したものではありません。iPhone実機の録画ではありません。 活用写真はAI生成です。<a href="assets/video/compare-practice-v2.mp4">動画を直接開く</a></p><p>音楽：Cipher / Kevin MacLeod (incompetech.com)、<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>。抜粋・音量調整。実演の映像：Jill Burrow / Pexels。</p></details>
         </figure>
-        <div class="feature-extra"><ol class="practice-flow" aria-label="レイヤー比較の使い方"><li><span>01</span>2本を選ぶ</li><li><span>02</span>瞬間をそろえる</li><li><span>03</span>違いを見る</li></ol><p class="sub">頭の位置、前傾、手足のライン<br>見つけた違いを、次の練習で試す</p><a class="text-link" href="#compare-sports">自分の競技なら、どこを見る？<img src="assets/arrow-right.svg" class="arrow-page" alt="" width="20" height="20"></a></div>
-      </div>
-      <div class="wrap practice-block" id="compare-sports"><div class="practice-heading"><p class="eyebrow cyan">What to compare</p><h3>あなたの競技なら、<br class="mobile-only">ここを見比べる</h3><p>同じ撮影方向・同じ局面にそろえると、違いを追いやすくなります。</p></div><div class="practice-grid"><article class="practice-card"><img src="assets/sports/golf.jpg" srcset="assets/sports/golf-480.jpg 480w, assets/sports/golf.jpg 960w" sizes="(max-width:760px) calc((100vw - 54px)/2), (max-width:1100px) calc((100vw - 138px)/2), 310px" alt="ゴルフスイングをする選手（活用イメージ）" width="960" height="640" loading="lazy" decoding="async"><div class="practice-card-copy"><p class="practice-sport">ゴルフ</p><h4>頭の位置と前傾</h4><p>アドレスやトップで、頭の位置や前傾を重ねて見る</p></div></article>
-<article class="practice-card"><img src="assets/sports/baseball.jpg" srcset="assets/sports/baseball-480.jpg 480w, assets/sports/baseball.jpg 960w" sizes="(max-width:760px) calc((100vw - 54px)/2), (max-width:1100px) calc((100vw - 138px)/2), 310px" alt="バッティングをする選手（活用イメージ）" width="960" height="640" loading="lazy" decoding="async"><div class="practice-card-copy"><p class="practice-sport">野球</p><h4>踏み出しと上半身</h4><p>投球・打撃の踏み出しで、足と上半身の位置を見る</p></div></article>
-<article class="practice-card"><img src="assets/sports/gymnastics.jpg" srcset="assets/sports/gymnastics-480.jpg 480w, assets/sports/gymnastics.jpg 960w" sizes="(max-width:760px) calc((100vw - 54px)/2), (max-width:1100px) calc((100vw - 138px)/2), 310px" alt="倒立のラインを保つ体操選手（活用イメージ）" width="960" height="640" loading="lazy" decoding="async"><div class="practice-card-copy"><p class="practice-sport">体操</p><h4>倒立や着地のライン</h4><p>倒立や着地を同じコマでそろえ、前回との違いを見る</p></div></article>
-<article class="practice-card"><img src="assets/sports/dance.jpg" srcset="assets/sports/dance-480.jpg 480w, assets/sports/dance.jpg 960w" sizes="(max-width:760px) calc((100vw - 54px)/2), (max-width:1100px) calc((100vw - 138px)/2), 310px" alt="振り付けを踊るダンサー（活用イメージ）" width="960" height="640" loading="lazy" decoding="async"><div class="practice-card-copy"><p class="practice-sport">ダンス</p><h4>同じポーズの手足</h4><p>同じポーズをそろえ、手足の位置や向きを見る</p></div></article></div><p class="practice-note">写真は活用イメージ（AI生成）。撮影角度が違うと、姿勢や角度の見え方も変わります。</p><div class="feature-download"><a class="button" data-store-link href="https://apps.apple.com/jp/app/id6831656347?pt=129755185&amp;ct=gf_web_202611&amp;mt=8">レイヤー比較を無料で使う<img src="assets/arrow-up-right.svg" alt="" width="20" height="20"></a><p class="fine">比較・AI骨格表示は無料 ／ 広告・アプリ内購入あり</p></div></div>
-      <div class="wrap screen-reference"><details><summary>アプリの掲載画面も見る</summary><div class="screen-reference-body"><div><div class="product-tabs" role="group" aria-label="掲載画面を切り替える"><button class="product-tab" type="button" aria-pressed="true" data-screen="overlay" hidden>重ねる</button><button class="product-tab" type="button" aria-pressed="false" data-screen="side" hidden>並べる</button></div><p class="screen-description">半透明で重ねて、動きのズレを確認。</p><a class="text-link" href="#how-to">最初の比較をはじめる<img src="assets/arrow-right.svg" class="arrow-page" alt="" width="20" height="20"></a></div><figure class="product-proof"><div class="screen-crop overlay"><img id="comparison-screen" src="assets/store-01.jpg" alt="お手本と練習の動画を半透明で重ねたGhostformのApp Store掲載画面" width="600" height="1304" loading="lazy"></div><figcaption>Ghostform / App Store掲載画面（静止画）</figcaption></figure></div></details></div>
-      <div class="wrap capability-row"><span>重ねる・左右・上下</span><span>タイミング合わせ</span><span>コマ送りで確認</span><span>線を描いて共有</span></div><p class="wrap fine">線・図形や書き出しの一部機能にはPROが必要です。</p>
-    </section>
-
-    <div class="brand-strip"><div class="wrap"><strong>GHOSTFORM</strong><span>FOR EVERY ATHLETE</span></div></div>
-
-    <section id="delay" class="section delay-section" aria-labelledby="delay-title">
-      <div class="wrap feature feature-story">
-        <div class="feature-copy"><p class="eyebrow orange">02 / Delay replay</p><h2 id="delay-title">動いた直後を、<br>自分で確かめる</h2><p class="lead">さっきの感覚が、<br>残っているうちに</p></div>
-        <figure class="feature-film">
-          <div class="film-stage"><video id="delay-film" width="720" height="1280" controls playsinline preload="none" poster="assets/video/delay-operation-poster.jpg" aria-label="3秒ディレイと4競技の活用例・30秒" aria-describedby="delay-film-caption"><source src="assets/video/delay-practice-v3.mp4" type="video/mp4">動画を再生できない場合は、下のリンクからご覧ください。</video><div class="film-cover film-cover-delay" aria-hidden="true" hidden><p>ディレイ再生</p><h4>3秒前の自分を見返す</h4><small>いまと3秒遅れを比較</small><div class="poster-pair"><span>いま</span><span>3秒遅れ</span></div></div><button class="film-play" type="button" data-play-film="delay-film" hidden><img src="assets/play-fill.svg" alt="" width="28" height="28"><span>30秒で使い方を見る<small>音声付き</small></span></button></div>
+              <details class="reference"><summary>アプリの掲載画面も見る</summary><div class="screen-reference-body"><div><div class="product-tabs" role="group" aria-label="掲載画面を切り替える"><button class="product-tab" type="button" aria-pressed="true" data-screen="overlay" hidden>重ねる</button><button class="product-tab" type="button" aria-pressed="false" data-screen="side" hidden>並べる</button></div><p class="screen-description">半透明で重ねて、動きのズレを確認。</p></div><figure class="product-proof"><div class="screen-crop overlay"><img id="comparison-screen" src="assets/store-01.jpg" alt="お手本と練習の動画を半透明で重ねたGhostformのApp Store掲載画面" width="600" height="1304" loading="lazy"></div><figcaption>Ghostform / App Store掲載画面（静止画）</figcaption></figure></div></details><a class="trial-link" data-site-link href="try/">サンプルで重ねてみる<span aria-hidden="true">→</span></a>
+              <a class="button feature-download" data-store-link href="https://apps.apple.com/jp/app/id6831656347?pt=129755185&amp;ct=gf_web_202611&amp;mt=8">フォーム比較を無料で使う<img src="assets/arrow-up-right.svg" alt="" width="19" height="19"></a>
+            </div>
+          </details>
+        </article><article class="feature-panel delay" id="delay" aria-labelledby="delay-title">
+          <div class="feature-intro">
+            <div class="feature-text"><p class="mode-name">ディレイ再生</p>
+              <h3 id="delay-title">動いた直後を見返す</h3><p>iPhoneを置いて練習。画面に戻ると、数秒前の自分の動きが映ります。</p>
+            </div>
+            <img class="feature-shot" src="assets/delay-preview.jpg" alt="ディレイ再生のApp Store掲載画面の一部" width="140" height="148" loading="lazy">
+          </div>
+          <details class="feature-detail">
+            <summary>操作手順と動画を見る<span class="duration">30秒</span></summary>
+            <div class="feature-body"><ol class="instructions"><li>iPhoneを固定し、カメラに全身が入る位置に立つ</li><li>動き終わって画面に戻るまでの秒数を選ぶ</li><li>いつも通り動いてから、画面で直前のフォームを確かめる</li></ol>
+              <figure class="feature-film">
+          <div class="film-stage"><video id="delay-film" width="720" height="1280" controls playsinline preload="none" poster="assets/video/delay-operation-poster.jpg" aria-label="3秒ディレイと4競技の活用例・30秒" aria-describedby="delay-film-caption"><source src="assets/video/delay-practice-v3.mp4" type="video/mp4">動画を再生できない場合は、下のリンクからご覧ください。</video><button class="film-play" type="button" data-play-film="delay-film" hidden><img src="assets/play-fill.svg" alt="" width="28" height="28"><span>30秒で使い方を見る<small>音声付き</small></span></button></div>
           <div class="film-tools"><span>30秒・音声付き</span><button type="button" data-expand-film="delay-film" hidden>大きく見る<img src="assets/arrow-up-right.svg" alt="" width="17" height="17"></button></div>
           <figcaption id="delay-film-caption">1回の動きが約3秒後に返る実演と、4競技の使い方</figcaption><p class="film-status" aria-live="polite"></p>
           <details class="film-about"><summary>動画について・再生できないとき</summary><p>サンプル映像をカメラ入力に使ったブラウザ実演です。同じ連続収録からライブ小窓と遅延映像を拡大し、編集で両者の時間差を加えていません。iPhone実機の録画ではありません。 活用写真はAI生成です。<a href="assets/video/delay-practice-v3.mp4">動画を直接開く</a></p><p>音楽：Cipher / Kevin MacLeod (incompetech.com)、<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>。抜粋・音量調整。実演の映像：Julia Larson / Pexels。</p></details>
         </figure>
-        <div class="feature-extra"><ol class="practice-flow delay-practice-flow" aria-label="ディレイ再生の使い方"><li><span>01</span>まず動く</li><li><span>02</span>映像を見返す</li><li><span>03</span>次に試す</li></ol><p class="sub">カメラの映像を数秒遅れで再生。<br>動き終わって画面を見れば、直前の自分が。<br>録画を止めて探す手間を減らします。</p><p class="delay-setting">無料版は3〜10秒。動き終えて、画面を見る時間に合わせて設定。<br>長めの演技には、PROで最大60秒まで。動画は3秒ディレイの実演です。</p><a class="text-link" href="#delay-sports">いつもの練習では、こう使う<img src="assets/arrow-right.svg" class="arrow-page" alt="" width="20" height="20"></a></div>
-      </div>
-      <div class="wrap practice-block" id="delay-sports"><div class="practice-heading"><p class="eyebrow orange">Move, look back, try again</p><h3>いろんな練習で、<br class="mobile-only">動きを見返す</h3><p>ひとりの自主練にも、選手とコーチが一緒に振り返る時間にも。</p></div><div class="practice-grid"><article class="practice-card"><img src="assets/practice/delay-golf.jpg" srcset="assets/practice/delay-golf-480.jpg 480w, assets/practice/delay-golf.jpg 960w" sizes="(max-width:760px) calc((100vw - 54px)/2), (max-width:1100px) calc((100vw - 138px)/2), 310px" alt="スマホを設置してゴルフを練習する選手（活用イメージ）" width="960" height="640" loading="lazy" decoding="async"><div class="practice-card-copy"><p class="practice-sport">ゴルフ</p><h4>打った直後に見る</h4><p>打ってから画面へ戻り、感覚が残るうちにフォームを確認</p></div></article>
-<article class="practice-card"><img src="assets/practice/delay-baseball.jpg" srcset="assets/practice/delay-baseball-480.jpg 480w, assets/practice/delay-baseball.jpg 960w" sizes="(max-width:760px) calc((100vw - 54px)/2), (max-width:1100px) calc((100vw - 138px)/2), 310px" alt="スマホを設置して打撃練習をする選手（活用イメージ）" width="960" height="640" loading="lazy" decoding="async"><div class="practice-card-copy"><p class="practice-sport">野球</p><h4>振るたび見返す</h4><p>1スイングごとに振り返り、次の1球で試す</p></div></article>
-<article class="practice-card"><img src="assets/practice/delay-gymnastics.jpg" srcset="assets/practice/delay-gymnastics-480.jpg 480w, assets/practice/delay-gymnastics.jpg 960w" sizes="(max-width:760px) calc((100vw - 54px)/2), (max-width:1100px) calc((100vw - 138px)/2), 310px" alt="演技の後でスマホを見る体操選手（活用イメージ）" width="960" height="640" loading="lazy" decoding="async"><div class="practice-card-copy"><p class="practice-sport">体操</p><h4>着地後に見返す</h4><p>演技を終えてから、選手とコーチで姿勢を確認</p></div></article>
-<article class="practice-card"><img src="assets/practice/delay-dance.jpg" srcset="assets/practice/delay-dance-480.jpg 480w, assets/practice/delay-dance.jpg 960w" sizes="(max-width:760px) calc((100vw - 54px)/2), (max-width:1100px) calc((100vw - 138px)/2), 310px" alt="スマホを設置してダンスを練習する選手（活用イメージ）" width="960" height="640" loading="lazy" decoding="async"><div class="practice-card-copy"><p class="practice-sport">ダンス</p><h4>手足のラインを見る</h4><p>踊った直後を見返し、次の反復練習に生かす</p></div></article></div><p class="practice-note">写真は活用イメージ（AI生成）。動作の長さと、画面を見るまでの時間に合わせて遅延秒数を選んでください。</p><div class="feature-download"><a class="button" data-store-link href="https://apps.apple.com/jp/app/id6831656347?pt=129755185&amp;ct=gf_web_202611&amp;mt=8">3〜10秒ディレイを無料で使う<img src="assets/arrow-up-right.svg" alt="" width="20" height="20"></a><p class="fine">PROは必要になったら ／ 広告・アプリ内購入あり</p></div></div>
-    </section>
-
-    <section id="sports" class="section sports-section"><div class="wrap">
-      <p class="eyebrow cyan">Different sports, same curiosity</p><div class="sports-intro"><h2>競技は変わっても、<br>見返したい瞬間がある</h2><p>ゴルフ、野球、体操、ダンス、テニス、サッカー。<br>お手本との比較にも、自分の前回と今回にも。</p></div>
-      <div class="sports-list">
-        <article id="golf">
-          <a class="sport-link" href="#compare" aria-label="ゴルフの動画比較を見る">
-            <span class="sport-visual"><img class="sport-photo" src="assets/sports/golf.jpg" srcset="assets/sports/golf-480.jpg 480w, assets/sports/golf.jpg 960w" sizes="(max-width:760px) calc((100vw - 56px) / 2), (max-width:1100px) calc((100vw - 100px) / 2), 420px" alt="インパクト付近のゴルフスイングをする選手" width="960" height="640" loading="lazy" decoding="async"></span>
-            <div class="sport-heading"><span class="sport-no">01</span><h3><span lang="en">GOLF</span><small>ゴルフ</small></h3><img class="sport-arrow arrow-page" src="assets/arrow-right.svg" alt="" width="22" height="22"></div>
-            <p>同じ局面で、頭の位置と前傾を見る</p><span class="sport-action">インパクトを比べる</span>
-          </a>
-        </article>
-        <article id="baseball">
-          <a class="sport-link" href="#compare" aria-label="野球の動画比較を見る">
-            <span class="sport-visual"><img class="sport-photo" src="assets/sports/baseball.jpg" srcset="assets/sports/baseball-480.jpg 480w, assets/sports/baseball.jpg 960w" sizes="(max-width:760px) calc((100vw - 56px) / 2), (max-width:1100px) calc((100vw - 100px) / 2), 420px" alt="バッティングのインパクト付近の選手" width="960" height="640" loading="lazy" decoding="async"></span>
-            <div class="sport-heading"><span class="sport-no">02</span><h3><span lang="en">BASEBALL</span><small>野球</small></h3><img class="sport-arrow arrow-page" src="assets/arrow-right.svg" alt="" width="22" height="22"></div>
-            <p>踏み出しと上半身の位置を重ねる</p><span class="sport-action">スイングを重ねる</span>
-          </a>
-        </article>
-        <article id="gymnastics">
-          <a class="sport-link" href="#how-to" aria-label="体操の比較の始め方を見る">
-            <span class="sport-visual"><img class="sport-photo" src="assets/sports/gymnastics.jpg" srcset="assets/sports/gymnastics-480.jpg 480w, assets/sports/gymnastics.jpg 960w" sizes="(max-width:760px) calc((100vw - 56px) / 2), (max-width:1100px) calc((100vw - 100px) / 2), 420px" alt="腕と脚をまっすぐ伸ばして倒立する体操選手" width="960" height="640" loading="lazy" decoding="async"></span>
-            <div class="sport-heading"><span class="sport-no">03</span><h3><span lang="en">GYMNASTICS</span><small>体操</small></h3><img class="sport-arrow arrow-page" src="assets/arrow-right.svg" alt="" width="22" height="22"></div>
-            <p>倒立や着地のラインを同じコマで比べる</p><span class="sport-action">同じ瞬間で止める</span>
-          </a>
-        </article>
-        <article id="dance">
-          <a class="sport-link" href="#delay" aria-label="ダンスのディレイ再生を見る">
-            <span class="sport-visual"><img class="sport-photo" src="assets/sports/dance.jpg" srcset="assets/sports/dance-480.jpg 480w, assets/sports/dance.jpg 960w" sizes="(max-width:760px) calc((100vw - 56px) / 2), (max-width:1100px) calc((100vw - 100px) / 2), 420px" alt="スタジオで振り付けを踊るダンサー" width="960" height="640" loading="lazy" decoding="async"></span>
-            <div class="sport-heading"><span class="sport-no">04</span><h3><span lang="en">DANCE</span><small>ダンス</small></h3><img class="sport-arrow arrow-page" src="assets/arrow-right.svg" alt="" width="22" height="22"></div>
-            <p>踊った直後のポーズとタイミングを見る</p><span class="sport-action">踊った直後を見返す</span>
-          </a>
-        </article>
-        <article id="tennis">
-          <a class="sport-link" href="#compare" aria-label="テニスの動画比較を見る">
-            <span class="sport-visual"><img class="sport-photo" src="assets/sports/tennis.jpg" srcset="assets/sports/tennis-480.jpg 480w, assets/sports/tennis.jpg 960w" sizes="(max-width:760px) calc((100vw - 56px) / 2), (max-width:1100px) calc((100vw - 100px) / 2), 420px" alt="両手でバックハンドを打つテニス選手" width="960" height="640" loading="lazy" decoding="async"></span>
-            <div class="sport-heading"><span class="sport-no">05</span><h3><span lang="en">TENNIS</span><small>テニス</small></h3><img class="sport-arrow arrow-page" src="assets/arrow-right.svg" alt="" width="22" height="22"></div>
-            <p>踏み込みとラケットの位置を比べる</p><span class="sport-action">ストロークを比べる</span>
-          </a>
-        </article>
-        <article id="soccer">
-          <a class="sport-link" href="#compare" aria-label="サッカーの動画比較を見る">
-            <span class="sport-visual"><img class="sport-photo" src="assets/sports/soccer.jpg" srcset="assets/sports/soccer-480.jpg 480w, assets/sports/soccer.jpg 960w" sizes="(max-width:760px) calc((100vw - 56px) / 2), (max-width:1100px) calc((100vw - 100px) / 2), 420px" alt="ボールを蹴るサッカー選手" width="960" height="640" loading="lazy" decoding="async"></span>
-            <div class="sport-heading"><span class="sport-no">06</span><h3><span lang="en">SOCCER</span><small>サッカー</small></h3><img class="sport-arrow arrow-page" src="assets/arrow-right.svg" alt="" width="22" height="22"></div>
-            <p>軸足と上半身の位置を重ねる</p><span class="sport-action">キックを見比べる</span>
-          </a>
-        </article>
-      </div><p class="sports-note">比べるときは、できるだけ同じ撮影方向・同じ局面で。<br>撮影角度が違うと、姿勢や角度の見え方も変わります。</p>
+              <p class="detail-note">無料版は3〜10秒、PROは最大60秒まで設定できます。</p>
+              <a class="button feature-download" data-store-link href="https://apps.apple.com/jp/app/id6831656347?pt=129755185&amp;ct=gf_web_202611&amp;mt=8">ディレイ再生を無料で使う<img src="assets/arrow-up-right.svg" alt="" width="19" height="19"></a>
+            </div>
+          </details>
+        </article></div>
     </div></section>
-
-    <section id="how-to" class="section how-section"><div class="wrap"><p class="eyebrow">First comparison</p><h2>最初は、2本の動画から</h2><ol class="steps"><li><span>01</span><h3>2本を選ぶ</h3><p>お手本と自分、前回と今回。<br>自分の動画同士でも始められます。</p></li><li><span>02</span><h3>同じ瞬間に合わせる</h3><p>構え、踏み出し、着地。<br>見比べたい場面にタイミングをそろえます。</p></li><li><span>03</span><h3>重ねて、ひとつ見る</h3><p>濃さを変えたり、コマを送ったり。<br>まずは気になる場所をひとつだけ。</p></li></ol><a class="button button-dark" data-store-link href="https://apps.apple.com/jp/app/id6831656347?pt=129755185&amp;ct=gf_web_202611&amp;mt=8">iPhoneで無料ダウンロード<img src="assets/arrow-up-right.svg" alt="" width="21" height="21"></a><p class="fine">登録不要で無料から ／ 広告・利用上限あり</p></div></section>
-
-    <section id="pricing" class="section pricing-section" aria-labelledby="pricing-title">
-      <div class="wrap pricing-inner">
-        <p class="eyebrow cyan">Free &amp; PRO</p>
-        <h2 id="pricing-title">無料のままでも、<br class="mobile-only">しっかり使える</h2>
-        <p class="pricing-lead">重ねて比べる、骨格を見る、直前の動きを見返す。練習の基本をひとつのアプリで。<br>まずは無料で使って、必要になったときだけPROへ。</p>
-        <p class="pricing-promise">月額・年額サブスクなし<span>PROは一度の購入で使えます</span></p>
-        <a class="comparison-jump" href="#app-comparison">A社・B社・C社との比較を見る<img src="assets/arrow-right.svg" class="arrow-page" alt="" width="18" height="18"></a>
-        <div class="pricing-grid">
-          <article class="plan" aria-labelledby="free-plan-title">
-            <div class="plan-heading"><p class="plan-label">まずは無料で</p><h3 id="free-plan-title">無料版</h3><p class="plan-price">¥0</p><p class="plan-description">比較も、骨格も、直前の振り返りも</p></div>
-            <ul class="plan-features">
-              <li>重ねる・左右・上下で比較、AI骨格表示</li>
-              <li>ディレイ再生 <strong>3〜10秒</strong></li>
-              <li>スロー・コマ送り、フリーハンドの描画</li>
-              <li><strong>720p</strong>で書き出し（1日3本まで）</li>
-              <li>比較の履歴を<strong>3件</strong>まで保存</li>
-            </ul>
-            <p class="plan-note">広告・ロゴ表示あり ／ 登録不要</p>
-            <a class="button plan-cta plan-cta-free" data-store-link href="https://apps.apple.com/jp/app/id6831656347?pt=129755185&amp;ct=gf_web_202611&amp;mt=8">無料で始める<img src="assets/arrow-up-right.svg" alt="" width="20" height="20"></a>
-          </article>
-          <article class="plan plan-pro" aria-labelledby="pro-plan-title">
-            <div class="plan-heading"><p class="plan-label">公開記念価格</p><h3 id="pro-plan-title">Ghostform PRO</h3><p class="plan-price">¥680 <span>買い切り</span></p><p class="plan-description">一度の購入で、広告・ロゴなしに<br>月額・年額サブスクなし</p></div>
-            <ul class="plan-features">
-              <li><strong>広告なし・ロゴなし</strong>で使える</li>
-              <li>ディレイ再生を<strong>最大60秒</strong>まで</li>
-              <li><strong>1080p</strong>で書き出し、本数制限なし</li>
-              <li>比較の履歴を<strong>100件</strong>まで保存</li>
-              <li>直線の角度・円・四角の描画、撮影中の水平器</li>
-            </ul>
-            <p class="plan-note">まずは無料版で試して、必要ならアプリ内で購入</p>
-            <a class="button plan-cta" data-store-link href="https://apps.apple.com/jp/app/id6831656347?pt=129755185&amp;ct=gf_web_202611&amp;mt=8">iPhone版をダウンロード<img src="assets/arrow-up-right.svg" alt="" width="20" height="20"></a>
-          </article>
-        </div>
-        <div class="pricing-notes"><p>無料版の自動合わせは1日3回まで。PROでは制限なく使えます。</p><p>iPhone版・日本のApp Storeで2026年11月14日に確認した価格です。最新の販売価格は、アプリ内の購入画面でご確認ください。</p></div>
-        <aside class="upgrade-guide" aria-labelledby="upgrade-title">
-          <h3 id="upgrade-title">こんなときは、PROが便利</h3>
-          <dl>
-            <div><dt>演技を終えてから、画面へ戻りたい</dt><dd>ディレイを30秒・60秒に<br>動きの長さや戻る時間に合わせて設定</dd></div>
-            <div><dt>選手やコーチに、すっきり見せたい</dt><dd>広告なし・ロゴなし<br>比較した動画を1080pで書き出し</dd></div>
-            <div><dt>前回との変化を、続けて見たい</dt><dd>比較の履歴を100件まで<br>練習の記録を残して、次の確認へ</dd></div>
-          </dl>
-        </aside>
-        <section id="app-comparison" class="app-comparison" aria-labelledby="app-comparison-title">
-          <div class="comparison-heading"><p class="eyebrow cyan">Choose your practice tool</p><h3 id="app-comparison-title">機能と、支払い方を見比べる</h3><p>フォーム確認に何を使うか、続ける練習に合わせて選ぼう</p></div>
-          <p class="comparison-date"><time datetime="2026-11-14">2026年11月14日</time>時点の比較 ／ 日本のiPhone版</p>
-          <div class="comparison-switch" role="group" aria-label="比較するアプリ" hidden>
-            <button type="button" data-compare-company="a" aria-pressed="true" aria-controls="app-comparison-table">A社</button>
-            <button type="button" data-compare-company="b" aria-pressed="false" aria-controls="app-comparison-table">B社</button>
-            <button type="button" data-compare-company="c" aria-pressed="false" aria-controls="app-comparison-table">C社</button>
-          </div>
-          <p class="comparison-scroll-hint">横にスクロールして、各社の情報をご覧いただけます</p>
-          <div class="comparison-scroll" role="region" aria-label="GhostformとA社・B社・C社の料金・機能比較" tabindex="0">
-            <table id="app-comparison-table" class="app-comparison-table">
-              <caption class="comparison-caption">有料料金は掲載プランの一例です。機能の利用条件はプラン・端末により異なります。</caption>
-              <thead><tr><th scope="col">比較項目</th><th scope="col" class="our-app">Ghostform<small>フォーム比較・ディレイ</small></th><th scope="col" class="company-a">A社<small>フォーム分析・指導</small></th><th scope="col" class="company-b">B社<small>比較・描画・ディレイ</small></th><th scope="col" class="company-c">C社<small>ディレイ・動作解析</small></th></tr></thead>
-              <tbody>
-                <tr><th scope="row">支払い方</th><td class="our-app"><strong>無料＋買い切り</strong><small>月額・年額なし</small></td><td class="company-a">月額・年額など</td><td class="company-b">月額・年額</td><td class="company-c">月額・年額など</td></tr>
-                <tr class="comparison-price-row"><th scope="row">有料料金例</th><td class="our-app"><strong>¥680</strong><small>一度だけの購入<br>PRO・公開記念価格</small></td><td class="company-a"><strong>¥1,500<small>／月・Standard</small></strong><small>Premiumは¥2,500／月</small></td><td class="company-b"><strong>¥400<small>／月</small></strong><small>または¥4,000／年</small></td><td class="company-c"><strong>¥1,100<small>／月</small></strong><small>年額例：¥3,500・¥9,000</small></td></tr>
-                <tr><th scope="row">無料での利用</th><td class="our-app">基本機能は無料<small>広告・一部上限あり</small></td><td class="company-a">14日間の体験<small>コーチの契約条件により、選手は無料</small></td><td class="company-b">無料利用可<small>範囲は出典参照</small></td><td class="company-c">購入前に利用可<small>範囲は出典参照</small></td></tr>
-                <tr><th scope="row">映像の比較</th><td class="our-app">重ねる・左右・上下<small>無料</small></td><td class="company-a">重ねる・並べる</td><td class="company-b">重ねる・並べる</td><td class="company-c">分割表示</td></tr>
-                <tr><th scope="row">ディレイ再生</th><td class="our-app">無料で3〜10秒<small>PROは最大60秒</small></td><td class="company-a">公式説明に記載なし</td><td class="company-b">対応</td><td class="company-c">対応<small>長時間バッファにも対応</small></td></tr>
-                <tr><th scope="row">AIによる姿勢解析</th><td class="our-app">2D骨格表示<small>無料・端末内で解析</small></td><td class="company-a">2D骨格表示<small>Standardに対応<br>ゴルフ3DはPremium</small></td><td class="company-b">公式説明に記載なし</td><td class="company-c">競技別の動作解析<small>端末内で解析</small></td></tr>
-                <tr><th scope="row">特徴的な機能</th><td class="our-app">比較・骨格・ディレイをひとつに</td><td class="company-a">コーチとの動画共有・メッセージ</td><td class="company-b">動画への描画・比較の書き出し</td><td class="company-c">外部カメラ接続・複数方向の撮影</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="comparison-note">「記載なし」は、今回確認した公式説明に記載がない項目です。非対応を意味しません。各社の機能・料金が同等という比較ではありません。</p>
-          <details class="comparison-sources"><summary>比較条件・出典を見る</summary><div>
-            <p>各社の日本向けApp Store掲載情報と開発元の公開情報を、上記の日付に確認しました。料金は個人向け有料プランの掲載例です。他のプラン・購入条件がある場合もあり、最新の価格や利用条件は各アプリの購入画面をご確認ください。</p>
-            <ul>
-              <li><strong>Ghostform</strong>：PRO ¥680（買い切り・公開記念価格）。<a data-store-link href="https://apps.apple.com/jp/app/id6831656347?pt=129755185&amp;ct=gf_web_202611&amp;mt=8" target="_blank" rel="noopener noreferrer">App Store掲載情報</a>と現行アプリの仕様を確認</li>
-              <li><strong>A社</strong>：Individual Standard Monthly ¥1,500、Individual Premium Monthly ¥2,500。<a href="https://apps.apple.com/jp/app/onform-%E5%8B%95%E7%94%BB%E5%88%86%E6%9E%90%E3%82%A2%E3%83%97%E3%83%AA/id1490334045" target="_blank" rel="noopener noreferrer">App Store掲載情報</a>・<a href="https://onform.com/pricing/" target="_blank" rel="noopener noreferrer">開発元のプラン説明</a>。Standard／Proのコーチと利用する選手には、無料となる条件あり</li>
-              <li><strong>B社</strong>：月額プラン ¥400、年額プラン ¥4,000。<a href="https://apps.apple.com/jp/app/skill-cam/id6788213774" target="_blank" rel="noopener noreferrer">App Store掲載情報</a>・<a href="https://www.sportlight.jp/news/2026/08/13/skill-cam/" target="_blank" rel="noopener noreferrer">開発元の機能・料金案内</a></li>
-              <li><strong>C社</strong>：Monthly ¥1,100、Yearly ¥3,500・¥9,000。<a href="https://apps.apple.com/jp/app/video-delay-instant-replay/id1135528824" target="_blank" rel="noopener noreferrer">App Store掲載情報</a>。週額や無料体験付きなど、別の料金も掲載</li>
-            </ul>
-            <p>公式の掲載情報を比較したもので、各社アプリの実機テストや解析精度の比較は行っていません。</p>
-          </div></details>
-        </section>
+    <section class="section pricing" id="pricing" aria-labelledby="pricing-title"><div class="wrap price-layout">
+      <div class="section-heading"><h2 id="pricing-title">料金プラン</h2><p class="section-intro">基本機能は無料です。<br>長いディレイや高画質の書き出しが必要な方は、アプリ内でPROを購入できます。</p></div>
+      <div class="price-body">
+        <table class="plans"><caption class="visually-hidden">無料版とGhostform PROの料金・機能</caption>
+          <thead><tr><th scope="col">プラン</th><th scope="col" id="free-plan-title">無料版<b>¥0</b></th><th scope="col" id="pro-plan-title">PRO<b>¥680</b><small>買い切り</small></th></tr></thead>
+          <tbody>
+            <tr><th scope="row">動画比較<br>AI骨格表示</th><td>使える</td><td>使える</td></tr>
+            <tr><th scope="row">ディレイ</th><td>3〜10秒</td><td>最大60秒</td></tr>
+            <tr><th scope="row">書き出し</th><td>720p<small>1日3本まで</small></td><td>1080p<small>本数制限なし</small></td></tr>
+            <tr><th scope="row">広告・ロゴ</th><td>あり</td><td>なし</td></tr>
+          </tbody>
+        </table>
+        <p class="price-note">PROは月額・年額の支払いなし。¥680は日本での公開記念価格です（2026年11月14日確認）。最新価格はアプリ内の購入画面でご確認ください。</p>
+        <details class="price-detail" id="upgrade-title"><summary>履歴の保存件数や描画機能の違い</summary>
+          <dl class="more-plans"><dt>履歴の保存</dt><dd>無料版は3件、PROは100件まで。</dd>
+          <dt>動画の自動合わせ</dt><dd>無料版は1日3回、PROは回数制限なし。</dd>
+          <dt>描画と撮影</dt><dd>フリーハンドの描画、スロー再生、コマ送りは無料です。PROでは直線の角度・円・四角の描画と、撮影中の水平器も使えます。</dd></dl>
+        </details>
       </div>
-    </section>
-
-    <section class="wrap section faq-section" id="faq"><div><p class="eyebrow cyan">Before you start</p><h2>無料で始める前に</h2></div><div class="faq-list">
-      <details><summary>無料で使えますか？</summary><p>はい。レイヤー比較（重ねる・左右・上下）、AI骨格表示、ディレイ再生（3〜10秒）、スロー・コマ送り、フリーハンドの描画など、フォーム確認の基本機能を無料で使えます。720pの動画書き出しは1日3本、比較の履歴保存は3件までです（広告・ロゴ表示あり）。</p><p>広告やロゴを消したい、ディレイを最大60秒にしたい、高画質で残したいときは、買い切りのGhostform PROを選べます。1080p書き出し、履歴100件、直線の角度・円・四角の描画や撮影中の水平器にも対応します。月額・年額のサブスクリプションはありません。</p><p><a href="#pricing">無料版とPROを見比べる</a></p></details>
-      <details><summary>PROは毎月・毎年の支払いが必要ですか？</summary><p>いいえ。Ghostform PROは一度だけ購入する買い切り版です。月額・年額のサブスクリプション契約はありません。現在の公開記念価格は680円です。購入はアプリ内から行い、最終的な価格は購入画面でご確認いただけます。</p></details>
-      <details><summary>無料版を使っているだけで、課金されますか？</summary><p>無料版の利用だけでPROへ自動的に切り替わることはありません。PROは、必要になったときにアプリ内で購入する仕組みです。無料版には広告・ロゴ表示と、書き出し回数や履歴保存などの上限があります。</p></details>
-      <details><summary>動画は外部に送られますか？</summary><p>動画と骨格解析の処理は端末内で行い、動画を外部のサーバーへ送信しません。広告などに関するデータの取り扱いは、<a href="privacy.html">プライバシーポリシー</a>をご確認ください。</p></details>
-      <details><summary>お手本の動画がなくても使えますか？</summary><p>はい。自分の「前回と今回」の動画を比べたり、ディレイ再生で動いた直後を見返したりできます。</p></details>
-      <details><summary>AndroidやiPadで使えますか？</summary><p>このページではiPhone版をご案内しています。対応端末やOSの最新情報は、<a data-store-link href="https://apps.apple.com/jp/app/id6831656347?pt=129755185&amp;ct=gf_web_202611&amp;mt=8">App Storeの掲載情報</a>をご確認ください。</p></details>
-      <details><summary>操作が分からない・不具合を報告したい</summary><p><a href="support.html">サポートページ</a>からお問い合わせください。お使いの機種と、どの画面で何が起きたかをお知らせいただけると確認しやすくなります。</p></details>
     </div></section>
-
-    <section class="closing" id="download"><div class="wrap"><p class="closing-en" aria-hidden="true">YOUR NEXT MOVE.</p><div class="closing-bottom"><div><p class="eyebrow">GHOSTFORM / ゴーストフォーム</p><h2>いつもの練習を、<br>まずは無料で見返そう</h2></div><div><a class="button" data-store-link href="https://apps.apple.com/jp/app/id6831656347?pt=129755185&amp;ct=gf_web_202611&amp;mt=8">iPhoneで無料ダウンロード<img src="assets/arrow-up-right.svg" alt="" width="23" height="23"></a><p class="closing-reassurance">PROは必要になったら、買い切りで<br>月額・年額サブスクなし</p><p class="fine">iPhone・iOS 16.0以降 ／ 広告・アプリ内購入あり</p></div></div></div></section>
+    <section class="section sports" id="sports" aria-labelledby="sports-title"><div class="wrap">
+      <span id="compare-sports"></span><span id="delay-sports"></span>
+      <h2 id="sports-title">競技別の使い方</h2><p class="section-intro">競技を選ぶと、フォームのどこを見るかを確認できます。</p>
+      <div class="sport-list"><details class="sport" id="golf">
+          <summary><img src="assets/sports/golf-480.jpg" alt="" loading="lazy" width="96" height="64"><span><strong>ゴルフ</strong><small>インパクトの前傾</small></span></summary>
+          <dl><dt>フォーム比較</dt><dd>同じ方向から撮ったスイングを重ね、頭の位置と前傾を見比べます。</dd><dt>ディレイ再生</dt><dd>打ったあとに画面へ戻り、直前のスイングを確認できます。</dd></dl>
+        </details>
+<details class="sport" id="baseball">
+          <summary><img src="assets/sports/baseball-480.jpg" alt="" loading="lazy" width="96" height="64"><span><strong>野球</strong><small>踏み込みと上半身</small></span></summary>
+          <dl><dt>フォーム比較</dt><dd>バットを振り出す瞬間をそろえ、踏み込んだ足と上半身の位置を比べます。</dd><dt>ディレイ再生</dt><dd>素振りのたびに画面を見て、次の一本で試せます。</dd></dl>
+        </details>
+<details class="sport" id="gymnastics">
+          <summary><img src="assets/sports/gymnastics-480.jpg" alt="" loading="lazy" width="96" height="64"><span><strong>体操</strong><small>倒立と着地の姿勢</small></span></summary>
+          <dl><dt>フォーム比較</dt><dd>倒立を同じコマで止め、肩から足先までのラインを比べます。</dd><dt>ディレイ再生</dt><dd>演技のあとで画面に戻り、着地の姿勢を見返せます。</dd></dl>
+        </details>
+<details class="sport" id="dance">
+          <summary><img src="assets/sports/dance-480.jpg" alt="" loading="lazy" width="96" height="64"><span><strong>ダンス</strong><small>ポーズの手足の位置</small></span></summary>
+          <dl><dt>フォーム比較</dt><dd>音に合わせた同じポーズで止めて、腕の高さやつま先の向きを比べます。</dd><dt>ディレイ再生</dt><dd>踊り終わった直後に、振り付けのタイミングを見返せます。</dd></dl>
+        </details>
+<details class="sport" id="tennis">
+          <summary><img src="assets/sports/tennis-480.jpg" alt="" loading="lazy" width="96" height="64"><span><strong>テニス</strong><small>踏み込みと打点</small></span></summary>
+          <dl><dt>フォーム比較</dt><dd>ストロークの同じ局面で、踏み込んだ足とラケットの位置を比べます。</dd><dt>ディレイ再生</dt><dd>素振りの直後に、ラケットを振り抜く動きを見返せます。</dd></dl>
+        </details>
+<details class="sport" id="soccer">
+          <summary><img src="assets/sports/soccer-480.jpg" alt="" loading="lazy" width="96" height="64"><span><strong>サッカー</strong><small>キックの軸足</small></span></summary>
+          <dl><dt>フォーム比較</dt><dd>ボールを蹴る瞬間をそろえ、軸足の位置と上半身の傾きを比べます。</dd><dt>ディレイ再生</dt><dd>蹴ったあとに画面へ戻り、踏み込みから振り抜きまで見返せます。</dd></dl>
+        </details></div>
+      <p class="sports-note">写真はAIによる活用イメージです。動画を比べるときは、撮影方向と動作のタイミングをそろえてください。</p>
+    </div></section>
+    <section id="faq" class="section faq"><div class="wrap faq-layout"><h2>よくある質問</h2><div>
+      <details class="question"><summary>お手本の動画がなくても使えますか？</summary><p>はい。自分の前回と今回の動画でも比較できます。ディレイ再生なら、その場でカメラに映った自分の動きを見返せます。</p></details>
+      <details class="question"><summary>無料で使い続けられますか？</summary><p>はい。無料版からPROに自動で切り替わることはありません。<a href="#pricing">無料で使える機能と利用上限を見る</a></p></details>
+      <details class="question"><summary>動画は外部に送られますか？</summary><p>動画の処理と骨格解析は端末内で行います。動画を外部のサーバーへ送信しません。広告などのデータの扱いは<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p></details>
+      <details class="question"><summary>対応機種や問い合わせ先を知りたい</summary><p>このサイトではiPhone版をご案内しています。対応機種は<a data-store-link href="https://apps.apple.com/jp/app/id6831656347?pt=129755185&amp;ct=gf_web_202611&amp;mt=8">App Storeの掲載情報</a>、操作についての質問や不具合の連絡は<a href="support.html">サポートページ</a>でご確認ください。</p></details>
+    </div></div></section>
+    <section id="download" class="closing"><div class="wrap closing-inner"><div><h2>自分のフォームで試してみよう</h2><p>iPhoneで無料から始められます。</p></div><a class="button " data-store-link href="https://apps.apple.com/jp/app/id6831656347?pt=129755185&amp;ct=gf_web_202611&amp;mt=8">App Storeでダウンロード<img src="assets/arrow-up-right.svg" alt="" width="19" height="19"></a></div></section>
   </main>
-  <footer class="wrap"><a class="brand" href="./" aria-label="Ghostform ホーム"><img src="assets/app-icon.jpg" alt="" width="36" height="36"><span>GHOSTFORM</span></a><div><a href="support.html">サポート</a><a href="privacy.html">プライバシー</a><a data-site-link href="privacy.html#web-measurement">利用状況の集計</a><a href="https://note.com/ghostform">開発のnote</a></div><span>© Ghostform</span></footer>
+  <footer><div class="wrap footer-inner"><a class="brand" href="./" aria-label="Ghostform ホーム"><img src="assets/app-icon.jpg" alt="" width="34" height="34"><span>GHOSTFORM</span></a><nav aria-label="関連リンク"><a href="support.html">サポート</a><a href="privacy.html">プライバシー</a><a href="privacy.html#web-measurement" data-site-link>利用状況の集計</a><a href="https://note.com/ghostform">開発のnote</a></nav><small>© Ghostform</small></div></footer>
   <dialog class="film-dialog" aria-labelledby="film-dialog-title"><div class="film-dialog-head"><strong id="film-dialog-title">使い方の実演</strong><button type="button" data-close-film autofocus>閉じる</button></div><div class="film-dialog-stage"></div><p>再生ボタンで開始 ／ スマホを横にしても見られます</p></dialog>
-  <aside class="mobile-download" aria-label="iPhone版のダウンロード" hidden><div><strong>iPhone版を無料で</strong><span>広告・アプリ内購入あり</span></div><a class="button" data-store-link href="https://apps.apple.com/jp/app/id6831656347?pt=129755185&amp;ct=gf_web_202611&amp;mt=8">ダウンロード<img src="assets/arrow-up-right.svg" alt="" width="18" height="18"></a></aside>
+  <aside class="mobile-download" aria-label="iPhone版のダウンロード" hidden><span>Ghostform <small>iPhone版</small></span><a class="button " data-store-link href="https://apps.apple.com/jp/app/id6831656347?pt=129755185&amp;ct=gf_web_202611&amp;mt=8">無料ダウンロード<img src="assets/arrow-up-right.svg" alt="" width="19" height="19"></a></aside>
   <script src="store-links.js?v=20261114-1"></script>
-  <script src="site.js?v=20261114-2" defer></script>
-  <script src="comparison.js?v=20261114-1" defer></script>
+  <script src="site.js?v=20261118" defer></script>
 </body>
 </html>
