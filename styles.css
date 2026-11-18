@@ -69,29 +69,42 @@ h2 { font-size: clamp(28px, 3.3vw, 48px); font-weight: 800; letter-spacing: -.04
 .trial-link span { font: 20px/1 Arial, sans-serif; }
 .hero-note { font-size: 12px; color: #bcc9cc; margin-top: 13px; }
 .sports, .faq { background: var(--paper); color: var(--dark-text); }
-.features { background: #111719; }
-.features .section-intro { color: var(--secondary); }
-.features h2 em { color: var(--cyan); font: italic 800 1.28em/.8 "Ghostform Display",sans-serif; padding-inline: .03em; }
+.features { background: #e9eeea; color: var(--dark-text); border-bottom: 1px solid var(--rule); }
 .feature-grid, .sport-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 24px; }
 .feature-grid { margin-top: 32px; gap: 20px; align-items: start; }
-.feature-panel { --accent: var(--cyan); overflow: hidden; border: 1px solid #404a4b; background: #1c2426; border-radius: 4px; }
-.feature-panel.delay { --accent: var(--orange); }
-.feature-intro { --shot-size: 38%; position: relative; display: grid; grid-template-columns: minmax(0,1fr) var(--shot-size); align-items: stretch; min-height: clamp(196px,16.5vw,252px); }
-.feature-text { align-self: center; padding: clamp(18px,1.8vw,28px); }
-.mode-name { color: var(--accent); display: flex; align-items: center; gap: 8px; font-size: 13px; }
-.mode-name::before { content: ""; width: 12px; height: 6px; background: currentColor; transform: skewX(-28deg); }
-.feature-panel h3 { margin: 8px 0 10px; font-weight: 800; font-size: clamp(22px, 2vw, 30px); letter-spacing: -.04em; }
-.feature-text > p:last-child { font-size: 15px; line-height: 1.8; color: #d4dcda; }
-.feature-shot { position: absolute; inset: 0 0 0 auto; width: var(--shot-size); height: 100%; object-fit: cover; object-position: center; clip-path: polygon(6% 0,100% 0,100% 100%,0 100%); }
+.feature-panel { --accent: #09666d; --inset: clamp(16px, 1.7vw, 28px); background: #fcfcf9; border: 1px solid #c2cbc5; border-radius: 8px; }
+.feature-panel.delay { --accent: #91451e; }
+.feature-intro {
+  padding: var(--inset);
+  display: grid;
+  grid-template: "title view" auto "copy view" 1fr / minmax(0, 1fr) minmax(0, .93fr);
+  gap: 12px var(--inset);
+}
+.feature-title { grid-area: title; align-self: end; }
+.mode-name { color: var(--accent); font-size: 14px; }
+.feature-panel h3 { margin-top: 8px; font-weight: 750; font-size: clamp(22px, 1.9vw, 30px); line-height: 1.36; text-wrap: balance; letter-spacing: -.035em; }
+.feature-text { grid-area: copy; color: var(--soft-text); font-size: 15px; }
+.feature-view { grid-area: view; align-self: center; background: #1b2426; border-radius: 4px; color: #fff; }
+.view-stage { width: 100%; aspect-ratio: 1 / 1; }
+.view-stage img { width: 100%; height: 100%; object-fit: contain; border-radius: 4px 4px 0 0; }
+.feature-view a { display: flex; align-items: center; justify-content: space-between; gap: 4px; min-height: 44px; padding: 8px 12px; font-size: 13px; text-decoration: none; }
+.feature-view a:focus-visible { outline-offset: -3px; outline-color: var(--cyan); }
+.product-tabs { display: inline-flex; max-width: 100%; padding: 3px; margin-top: 16px; border: 1px solid #c1cac4; border-radius: 8px; background: #e8ede8; }
+.product-tabs button { border: 0; border-radius: 5px; background: transparent; color: #354742; min-height: 44px; padding-inline: 12px; line-height: 1.25; font-size: 14px; }
+.product-tabs button[aria-pressed="true"] { color: #fff; background: #183a3d; font-weight: 700; }
+.delay-setting { margin-top: 16px; color: var(--accent); font-weight: 650; }
+.delay-setting span { display: block; font-size: 13px; color: var(--soft-text); font-weight: 500; }
+.delay-setting strong { font: italic 800 36px/1.2 "Ghostform Display",sans-serif; }
 summary { position: relative; cursor: pointer; }
 .feature-detail > summary, .price-detail > summary, .question > summary, .sport > summary { display: flex; align-items: center; gap: 12px; list-style: none; font-weight: 650; line-height: 1.5; }
 :is(.feature-detail,.price-detail,.question,.sport) > summary::-webkit-details-marker { display: none; }
 :is(.feature-detail,.price-detail,.question,.sport) > summary::after { content: ""; width: 9px; height: 9px; margin-inline: auto 4px; border: solid currentColor; border-width: 0 1.7px 1.7px 0; transform: translateY(-2px) rotate(45deg); flex: none; }
 :is(.feature-detail,.price-detail,.question,.sport)[open] > summary::after { transform: translateY(2px) rotate(225deg); }
-.feature-detail > summary { min-height: 52px; padding: 8px clamp(18px,1.8vw,28px); border-top: 1px solid #404a4b; font-size: 14px; }
-.feature-detail > summary:hover { background: #283235; }
+.feature-detail > summary { min-height: 52px; padding: 8px var(--inset); border-top: 1px solid #d2d8d1; border-radius: 0 0 8px 8px; font-size: 15px; }
+.feature-detail > summary:focus-visible { outline-offset: -3px; }
+.feature-detail[open] > summary { border-radius: 0; }
 .feature-detail > summary::after { color: var(--accent); }
-.duration { color: #afbfbd; font-size: 12px; font-weight: 500; font-variant-numeric: tabular-nums; }
+.duration { color: var(--soft-text); font-size: 13px; font-weight: 500; font-variant-numeric: tabular-nums; }
 .feature-body { border-top: 1px solid var(--rule); padding: 20px clamp(16px, 2.3vw, 32px) 28px; background: #f9faf6; color: var(--dark-text); }
 .instructions { margin: 0 0 21px; padding-left: 1.45em; line-height: 1.8; }
 .instructions li + li { margin-top: 6px; }
@@ -101,15 +114,11 @@ summary { position: relative; cursor: pointer; }
 .film-play { position: absolute; left: 50%; bottom: 60px; transform: translateX(-50%); display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 50px; width: max-content; max-width: 94%; border: 0; border-radius: 6px; padding: 10px 14px; background: var(--cyan); color: #08171b; font-weight: 700; line-height: 1.4; }
 .film-play small { display: block; font-size: 12px; }
 .film-tools { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 6px; font-size: 12px; }
-.film-tools button, .reference button, .film-dialog-head button { min-height: 44px; border: 1px solid #7a8989; color: inherit; background: transparent; border-radius: 5px; padding: 7px 12px; }
+.film-tools button, .film-dialog-head button { min-height: 44px; border: 1px solid #7a8989; color: inherit; background: transparent; border-radius: 5px; padding: 7px 12px; }
 .film-tools button { display: flex; align-items: center; gap: 8px; }
-.feature-film figcaption, .film-about, .reference figcaption, .detail-note, .screen-description { margin-top: 12px; color: var(--soft-text); font-size: 13px; }
-.film-about summary, .reference > summary { min-height: 44px; padding: 12px 0; }
+.feature-film figcaption, .film-about, .detail-note { margin-top: 12px; color: var(--soft-text); font-size: 13px; }
+.film-about summary { min-height: 44px; padding: 12px 0; }
 .film-about p { margin-block: 8px 14px; }
-.reference { margin-top: 18px; border-top: 1px solid var(--rule); }
-.reference button[aria-pressed=true] { background: var(--dark-text); color: white; }
-.screen-crop { margin-top: 12px; }
-.screen-crop img { width: min(100%, 250px); margin: auto; }
 .feature-download { margin-top: 16px; font-size: 14px; }
 .film-dialog { width: min(850px, calc(100% - 16px)); height: calc(100svh - 16px); max-height: none; border: 1px solid #52717a; border-radius: 8px; background: var(--bg); color: var(--ink); padding: 14px; }
 .film-dialog[open] { display: flex; flex-direction: column; gap: 10px; }
@@ -196,11 +205,11 @@ summary { position: relative; cursor: pointer; }
 .comparison-sources li + li { margin-top: 9px; }
 @media (min-width: 971px) {
   .hero-inner { width: min(1192px, calc(100% - 104px)); }
+  .feature-title { padding-top: clamp(12px, 2vw, 32px); }
 }
 @media (max-width: 970px) {
   .wrap { width: calc(100% - 64px); }
-  .feature-intro { --shot-size: 32%; }
-  .feature-text { padding: 16px; }
+  .feature-intro { grid-template: "title title" auto "view copy" 1fr / minmax(0, .9fr) minmax(0, 1fr); align-items: center; }
   .price-layout, .faq-layout { grid-template-columns: minmax(0,.65fr) minmax(0,1.35fr); gap: 32px; }
   .sport-list { gap: 12px; }
   .footer-inner { flex-wrap: wrap; gap: 16px; }
@@ -211,6 +220,7 @@ summary { position: relative; cursor: pointer; }
   .section { padding-block: 42px; }
   .header-inner { min-height: 59px; gap: 12px; }
   .header-inner nav { gap: 16px; }
+  .header-inner nav a:not(.wide-nav) { display: inline-flex; justify-content: center; align-items: center; min-width: 44px; min-height: 44px; padding-block: 6px; }
   .header-inner nav a { font-size: 14px; }
   .brand { font-size: 25px; gap: 8px; }
   .brand img { width: 30px; }
@@ -238,11 +248,12 @@ summary { position: relative; cursor: pointer; }
   .section-intro { font-size: 15px; margin-top: 8px; }
   .feature-grid, .price-layout, .faq-layout { grid-template-columns: minmax(0, 1fr); }
   .feature-grid { gap: 14px; margin-top: 22px; }
-  .feature-intro { --shot-size: 36%; min-height: 148px; }
-  .feature-text { padding: 16px; }
-  .feature-panel h3 { font-size: 23px; margin: 6px 0; }
-  .feature-text > p:last-child { font-size: 14px; }
-  .mode-name { font-size: 12px; }
+  .feature-panel { --inset: 16px; }
+  .feature-intro { grid-template-columns: minmax(0,.95fr) minmax(0,1fr); gap: 16px; }
+  .feature-panel h3 { font-size: 24px; margin: 4px 0 0; }
+  .feature-text { line-height: 1.65; }
+  .product-tabs button { padding-inline: 10px; }
+  .feature-view { max-width: 230px; width: 100%; }
   .feature-detail > summary { padding-inline: 16px; min-height: 48px; }
   .price-layout, .faq-layout { gap: 23px; }
   .plans td, .plans th { font-size: 14px; padding: 10px; }
@@ -278,9 +289,19 @@ summary { position: relative; cursor: pointer; }
   .header-inner .brand img { width: 26px; }
   .matrix th, .matrix td { padding-inline: 3px; }
   .hero h1 { font-size: 36px; }
-  .feature-intro { --shot-size: 31%; }
+  .feature-intro { column-gap: 12px; }
+  .product-tabs button { padding-inline: 6px; }
   .sport summary { padding: 8px; aspect-ratio: 1.12; }
   .feature-panel h3 { font-size: 21px; }
+}
+@media (hover: hover) and (pointer: fine) {
+  .feature-detail > summary:hover { background: #edf2ec; }
+  .feature-view a:hover { text-decoration: underline; }
+  .product-tabs button:not([aria-pressed="true"]):hover { background: #d6dfd9; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  :is(.button, .header-trial, .product-tabs button) { transition: transform 140ms cubic-bezier(.23,1,.32,1); }
+  :is(.button, .header-trial, .product-tabs button):active:not(:focus-visible) { transform: scale(.98); }
 }
 @media (orientation: landscape) and (max-height: 540px) {
   .mobile-download:not([hidden]) { display: none; }

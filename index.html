@@ -19,8 +19,7 @@
   <meta property="og:image:width" content="1536">
   <meta property="og:image:height" content="1024">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="preload" href="assets/athlete-hero.jpg" as="image">
-  <link rel="stylesheet" href="styles.css?v=20261118-hero">
+  <link rel="stylesheet" href="styles.css?v=20261119-preview">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Ghostform（ゴーストフォーム）","applicationCategory":"SportsApplication","operatingSystem":"iOS 16.0以降","url":"https://rikyuuuuuuun.github.io/ghostform-web/","installUrl":"https://apps.apple.com/jp/app/id6831656347","image":"https://rikyuuuuuuun.github.io/ghostform-web/assets/app-icon.jpg","description":"動画を重ねるフォーム比較とディレイ再生。ゴルフ・野球・体操・ダンスなどの練習を振り返るiPhoneアプリ。","offers":{"@type":"Offer","price":"0","priceCurrency":"JPY","description":"無料ダウンロード。広告・アプリ内購入あり。"}}</script>
   <script type="module" src="metrics.mjs?v=20261114-1"></script>
 </head>
@@ -33,7 +32,10 @@
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-stage">
-        <img class="hero-art" src="assets/athlete-hero.jpg" alt="" fetchpriority="high" width="1536" height="1024">
+        <picture>
+          <source type="image/webp" srcset="assets/athlete-640.webp 640w, assets/athlete-960.webp 960w, assets/athlete-1536.webp 1536w" sizes="(max-width: 760px) 100vw, (max-width: 1730px) 84vw, 1453px">
+          <img class="hero-art" src="assets/athlete-hero.jpg" alt="" fetchpriority="high" width="1536" height="1024">
+        </picture>
         <div class="wrap hero-inner">
           <p class="app-category">iPhone用フォーム比較アプリ</p>
           <h1 id="hero-title"><span>フォームを重ねて、</span><span>違いを見る</span></h1>
@@ -44,14 +46,24 @@
       </div>
     </section>
     <section class="section features" id="features" aria-labelledby="features-title"><div class="wrap">
-      <h2 id="features-title">練習で使える、<em>2</em>つの機能</h2>
-      <p class="section-intro">どちらも無料で使えます。</p>
+      <h2 id="features-title">無料で使える2つの機能</h2>
       <div class="feature-grid"><article class="feature-panel compare" id="compare" aria-labelledby="compare-title">
           <div class="feature-intro">
-            <div class="feature-text"><p class="mode-name">フォーム比較</p>
-              <h3 id="compare-title">2本の動画を重ねる</h3><p>お手本と自分を同じ瞬間で止めて、姿勢や手足の位置を見比べます。</p>
+            <header class="feature-title"><p class="mode-name">フォーム比較</p>
+              <h3 id="compare-title">2本の動画を見比べる</h3>
+            </header>
+            <div class="feature-text">
+              <p>お手本と自分の動画を同じ瞬間で止めて、姿勢や手足の位置を比べます。</p>
+              <div class="product-tabs" role="group" aria-label="フォーム比較の掲載画面" hidden>
+                <button type="button" aria-pressed="true" aria-controls="comparison-screen" data-screen="overlay">重ねる</button>
+                <button type="button" aria-pressed="false" aria-controls="comparison-screen" data-screen="side">並べる</button>
+              </div>
+              <noscript><a class="trial-link" href="assets/store-06.jpg">並べた例を見る</a></noscript>
             </div>
-            <img class="feature-shot" src="assets/compare-preview.jpg" alt="フォーム比較のApp Store掲載画面の一部" width="140" height="148" loading="lazy">
+            <figure class="feature-view">
+              <div class="view-stage"><img id="comparison-screen" src="assets/view-overlay.webp" alt="ゴルフのアドレスで、お手本と練習の姿勢を半透明に重ねた例" width="520" height="543" loading="lazy"></div>
+              <figcaption><a id="comparison-original" href="assets/store-01.jpg" aria-label="フォーム比較のApp Store掲載画像を拡大">掲載画像を拡大<span aria-hidden="true">↗</span></a></figcaption>
+            </figure>
           </div>
           <details class="feature-detail" id="how-to">
             <summary>操作手順と動画を見る<span class="duration">30秒</span></summary>
@@ -62,16 +74,23 @@
           <figcaption id="compare-film-caption">重ねる・止める・コマ送りと、4競技の使い方</figcaption><p class="film-status" aria-live="polite"></p>
           <details class="film-about"><summary>動画について・再生できないとき</summary><p>実アプリをブラウザで操作したデモです。同一素材の時刻をずらした操作例で、上達の前後を示したものではありません。iPhone実機の録画ではありません。 活用写真はAI生成です。<a href="assets/video/compare-practice-v2.mp4">動画を直接開く</a></p><p>音楽：Cipher / Kevin MacLeod (incompetech.com)、<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>。抜粋・音量調整。実演の映像：Jill Burrow / Pexels。</p></details>
         </figure>
-              <details class="reference"><summary>アプリの掲載画面も見る</summary><div class="screen-reference-body"><div><div class="product-tabs" role="group" aria-label="掲載画面を切り替える"><button class="product-tab" type="button" aria-pressed="true" data-screen="overlay" hidden>重ねる</button><button class="product-tab" type="button" aria-pressed="false" data-screen="side" hidden>並べる</button></div><p class="screen-description">半透明で重ねて、動きのズレを確認。</p></div><figure class="product-proof"><div class="screen-crop overlay"><img id="comparison-screen" src="assets/store-01.jpg" alt="お手本と練習の動画を半透明で重ねたGhostformのApp Store掲載画面" width="600" height="1304" loading="lazy"></div><figcaption>Ghostform / App Store掲載画面（静止画）</figcaption></figure></div></details><a class="trial-link" data-site-link href="try/">サンプルで重ねてみる<span aria-hidden="true">→</span></a>
+              <a class="trial-link" data-site-link href="try/">サンプルで重ねてみる<span aria-hidden="true">→</span></a>
               <a class="button feature-download" data-store-link href="https://apps.apple.com/jp/app/id6831656347?pt=129755185&amp;ct=gf_web_202611&amp;mt=8">フォーム比較を無料で使う<img src="assets/arrow-up-right.svg" alt="" width="19" height="19"></a>
             </div>
           </details>
         </article><article class="feature-panel delay" id="delay" aria-labelledby="delay-title">
           <div class="feature-intro">
-            <div class="feature-text"><p class="mode-name">ディレイ再生</p>
-              <h3 id="delay-title">動いた直後を見返す</h3><p>iPhoneを置いて練習。画面に戻ると、数秒前の自分の動きが映ります。</p>
+            <header class="feature-title"><p class="mode-name">ディレイ再生</p>
+              <h3 id="delay-title">動いた直後を見返す</h3>
+            </header>
+            <div class="feature-text">
+              <p>iPhoneを置いて踊り、ターンを終えたら画面を見る。数秒前の足運びを確認できます。</p>
+              <p class="delay-setting"><span>無料で設定できる遅延</span><strong>3–10</strong> 秒</p>
             </div>
-            <img class="feature-shot" src="assets/delay-preview.jpg" alt="ディレイ再生のApp Store掲載画面の一部" width="140" height="148" loading="lazy">
+            <figure class="feature-view">
+              <div class="view-stage"><img src="assets/view-delay.webp" alt="ダンスの遅延映像に、現在の動きを示すライブ小窓を重ねた例" width="452" height="480" loading="lazy"></div>
+              <figcaption><a href="assets/store-05.jpg" aria-label="ディレイ再生のApp Store掲載画像を拡大">掲載画像を拡大<span aria-hidden="true">↗</span></a></figcaption>
+            </figure>
           </div>
           <details class="feature-detail">
             <summary>操作手順と動画を見る<span class="duration">30秒</span></summary>
@@ -183,6 +202,6 @@
   <dialog class="film-dialog" aria-labelledby="film-dialog-title"><div class="film-dialog-head"><strong id="film-dialog-title">使い方の実演</strong><button type="button" data-close-film autofocus>閉じる</button></div><div class="film-dialog-stage"></div><p>再生ボタンで開始 ／ スマホを横にしても見られます</p></dialog>
   <aside class="mobile-download" aria-label="iPhone版のダウンロード" hidden><span>Ghostform <small>iPhone版</small></span><a class="button " data-store-link href="https://apps.apple.com/jp/app/id6831656347?pt=129755185&amp;ct=gf_web_202611&amp;mt=8">無料ダウンロード<img src="assets/arrow-up-right.svg" alt="" width="19" height="19"></a></aside>
   <script src="store-links.js?v=20261114-1"></script>
-  <script src="site.js?v=20261118" defer></script>
+  <script src="site.js?v=20261119-preview" defer></script>
 </body>
 </html>

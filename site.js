@@ -1,23 +1,25 @@
 // Presentation only: no tracking SDK, cookies or video inference.
 const comparisonScreen = document.querySelector('#comparison-screen');
-const description = document.querySelector('.screen-description');
+const originalScreen = document.querySelector('#comparison-original');
+const screenTabs = document.querySelector('.product-tabs');
 const screenChoices = {
-  overlay: {src:'assets/store-01.jpg', alt:'お手本と練習の動画を半透明で重ねたGhostformのApp Store掲載画面', text:'半透明で重ねて、動きのズレを確認。'},
-  side: {src:'assets/store-06.jpg', alt:'お手本と練習の動画を左右に並べたGhostformのApp Store掲載画面', text:'左右に並べて、同じ局面を見比べる。'}
+  overlay: { preview: 'assets/view-overlay.webp', original: 'assets/store-01.jpg', alt: 'ゴルフのアドレスで、お手本と練習の姿勢を半透明に重ねた例' },
+  side: { preview: 'assets/view-side.webp', original: 'assets/store-06.jpg', alt: '野球のスイングで、お手本と練習の姿勢を左右に並べた例' }
 };
-document.querySelectorAll('[data-screen]').forEach(button => {
-  button.hidden = false;
-  button.addEventListener('click', () => {
-    const key = button.dataset.screen;
-    const choice = screenChoices[key];
-    if (!choice || !comparisonScreen || !description) return;
-    comparisonScreen.src = choice.src;
-    comparisonScreen.alt = choice.alt;
-    comparisonScreen.parentElement.className = 'screen-crop ' + key;
-    description.textContent = choice.text;
-    document.querySelectorAll('[data-screen]').forEach(peer => peer.setAttribute('aria-pressed', String(peer === button)));
+if (comparisonScreen && originalScreen && screenTabs) {
+  screenTabs.hidden = false;
+  const choices = screenTabs.querySelectorAll('[data-screen]');
+  choices.forEach(button => {
+    button.addEventListener('click', () => {
+      if (button.getAttribute('aria-pressed') === 'true') return;
+      const choice = screenChoices[button.dataset.screen];
+      comparisonScreen.src = choice.preview;
+      comparisonScreen.alt = choice.alt;
+      originalScreen.href = choice.original;
+      choices.forEach(peer => peer.setAttribute('aria-pressed', String(peer === button)));
+    });
   });
-});
+}
 
 // Start a film only after a tap. Keep native controls and direct links as fallbacks.
 document.querySelectorAll('[data-play-film]').forEach(button => {
@@ -124,7 +126,7 @@ const finalDownload = document.querySelector('.closing [data-store-link]');
 if (mobileDownload && firstDownload && finalDownload && 'IntersectionObserver' in window) {
   const phoneLayout = matchMedia('(max-width: 760px)');
   const videos = [...document.querySelectorAll('.feature-film video')];
-  const nearbyActions = [...document.querySelectorAll('.feature-download, footer, #app-comparison')];
+  const nearbyActions = [...document.querySelectorAll('.feature-panel, footer, #app-comparison')];
   const inView = element => {
     if (element.closest('details:not([open])')) return false;
     const bounds = element.getBoundingClientRect();
