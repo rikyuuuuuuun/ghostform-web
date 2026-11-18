@@ -2,7 +2,7 @@
 
 ## Current layout — 2026-11-18
 
-The header links to `#app-comparison`, directly after the hero. Show the four dated price examples and the full four-app feature matrix by default on every viewport. Retain the source links and plan qualifications when refreshing these values. The separate `#pricing` table explains Ghostform's free and PRO limits. The layout descriptions below refer to the November 14 designs.
+The header links to `#app-comparison`, directly after the `#pricing` section. Show the four dated price examples and the full four-app feature matrix by default on every viewport. Retain the source links and plan qualifications when refreshing these values. The separate `#pricing` table explains Ghostform's free and PRO limits. The layout descriptions below refer to the November 14 designs.
 
 The user requested the section between First comparison and Before you start, an updated free-plan FAQ and a header link on 2026-11-14. Retain the existing dark/cyan/orange campaign direction and show free use before the optional PRO upgrade.
 
