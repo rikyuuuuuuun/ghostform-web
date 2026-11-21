@@ -121,8 +121,8 @@ document.querySelectorAll('[data-expand-film]').forEach(button => {
 // Show a phone CTA after the first download action has scrolled away.
 // Hide it around videos and the final CTA so it cannot cover playback controls.
 const mobileDownload = document.querySelector('.mobile-download');
-const firstDownload = document.querySelector('.hero-actions [data-store-link]');
-const finalDownload = document.querySelector('.closing [data-store-link]');
+const firstDownload = document.querySelector('.hero-actions .store-options');
+const finalDownload = document.querySelector('.closing .store-options');
 if (mobileDownload && firstDownload && finalDownload && 'IntersectionObserver' in window) {
   const phoneLayout = matchMedia('(max-width: 760px)');
   const videos = [...document.querySelectorAll('.feature-film video')];

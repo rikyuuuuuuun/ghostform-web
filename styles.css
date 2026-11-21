@@ -65,6 +65,7 @@ h2 { font-size: clamp(28px, 3.3vw, 48px); font-weight: 800; letter-spacing: -.04
 .button-hero { border-radius: 6px; }
 .button:hover { background: #92f2f7; }
 .button img { width: 18px; flex: none; }
+.store-options { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 16px; }
 .text-action { gap: 12px; min-height: 44px; width: fit-content; color: inherit; font-weight: 700; font-size: 15px; text-decoration: underline; }
 .text-action span { font: 20px/1 Arial, sans-serif; }
 .hero-note { font-size: 12px; color: #bcc9cc; margin-top: 13px; }
