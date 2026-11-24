@@ -5,7 +5,7 @@ main { width: min(100%, 44rem); margin: auto; padding: 1.2rem 1.25rem 4rem; }
 nav, footer { display: flex; gap: 1.5rem; align-items: center; justify-content: space-between; }
 a { color: #9ad2ff; text-underline-offset: .18em; }
 nav a, footer a { display: inline-flex; min-height: 44px; align-items: center; }
-nav { border-bottom: 1px solid #313641; }
+nav { border-bottom: 1px solid #313641; flex-wrap: wrap; column-gap: 1rem; row-gap: 0; }
 .brand { display: inline-flex; gap: .6rem; align-items: center; font-weight: 650; }
 .brand img { width: 32px; height: 32px; }
 h1 { font-size: clamp(1.95rem, 5vw, 3rem); line-height: 1.12; margin: 2.5rem 0 .75rem; letter-spacing: -.035em; }
