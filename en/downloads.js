@@ -1,6 +1,7 @@
 const regions = [...document.querySelectorAll(".market")];
 const picker = document.querySelector("#region");
 const defaultRegion = picker.querySelector('option[value=""]') ? "" : "US";
+const englishListing = document.querySelector(".english-listing");
 
 for (const region of regions) {
   picker.add(new Option(region.querySelector("h3").textContent, region.id));
@@ -14,6 +15,15 @@ function showRegion(id) {
   for (const region of regions) region.hidden = region !== selected;
   document.querySelector(".no-store").hidden = Boolean(selected) || awaitingChoice;
   document.querySelector(".checkout").hidden = !selected;
+  if (englishListing) {
+    const appleLink = selected?.querySelector('a[href^="https://apps.apple.com/"]');
+    englishListing.hidden = !appleLink;
+    if (appleLink) {
+      const url = new URL(appleLink.href);
+      url.searchParams.set("l", "en-US");
+      englishListing.querySelector("a").href = url.href;
+    }
+  }
 }
 
 picker.addEventListener("change", () => {
