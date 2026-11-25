@@ -23,6 +23,8 @@ The English download page lives at `en/index.html`. Each country or region has o
 
 ## Preview and publish
 
+After updating the verified market cards in `en/index.html`, run `node scripts/localize-storefronts.mjs` to update the Spanish and French downloads. Use `--check` to verify both copies before publishing.
+
 From this directory run `python -m http.server 8891 --bind 127.0.0.1`, then open the printed local URL. Check desktop and mobile widths, images, FAQ expansion, anchors and the App Store destination. For download changes, actually follow a default and a source-specific button and verify the Ghostform listing title and Japanese storefront; checking hrefs or only a 200 response is insufficient. Preserve the no-JavaScript fallback download links when changing campaign settings. Changing the storefront path must not change the issued campaign/provider tokens; actual attribution still requires Apple reporting.
 
 Inspect and commit only the intended files, then push `main`. Wait for the matching Pages deployment to succeed. Verify the actual public URL and its links after deployment; a successful push alone is not publication verification.
