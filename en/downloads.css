@@ -1,0 +1,53 @@
+@font-face {
+  font-family: Ghostform Display;
+  src: url("../assets/display.woff2") format("woff2");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+:root { color-scheme: light; font: 100%/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #141919; background: #f6f5ef; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: inherit; text-underline-offset: .22em; }
+a:focus-visible, select:focus-visible { outline: 3px solid #00838b; outline-offset: 4px; }
+.wrap { width: min(68rem, 100% - 3rem); margin-inline: auto; }
+.skip { position: absolute; top: -5rem; left: 1rem; background: white; padding: .5rem; z-index: 1; }
+.skip:focus { top: .3rem; }
+.mast, nav, footer, .wordmark { display: flex; align-items: center; }
+.mast { min-height: 4rem; justify-content: space-between; }
+.wordmark { gap: .65rem; text-transform: uppercase; font: italic 800 1.32rem/1 "Ghostform Display", sans-serif; text-decoration: none; }
+.wordmark img { border-radius: .4rem; }
+nav, footer { column-gap: 1.5rem; }
+nav a, footer a { padding-block: .7rem; }
+.hero { background: #010509; color: #f4f6f3; overflow: hidden; }
+.hero-inner { display: grid; grid-template-columns: 1fr 1fr; align-items: center; }
+.hero-inner > div { position: relative; z-index: 1; padding-block: 2.5rem; }
+h1 { font: italic 800 clamp(2.5rem, 5.2vw, 4.75rem)/.98 "Ghostform Display", sans-serif; letter-spacing: -.035em; margin: 0 0 1.2rem; }
+.hero p { color: #c4cfd2; max-width: 34rem; margin: 0; }
+.hero img { display: block; width: 100%; height: auto; }
+.downloads { padding-block: clamp(2rem, 5vw, 4rem); }
+.download-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 6vw, 6rem); }
+h2 { margin: 0 0 .65rem; font-size: clamp(1.8rem, 3.2vw, 2.6rem); line-height: 1.1; letter-spacing: -.035em; }
+.description p { max-width: 31rem; margin: .75rem 0 0; }
+label, h3 { display: block; font-size: 1rem; margin: 0 0 .5rem; font-weight: 650; }
+select { width: 100%; font: inherit; color: inherit; background: white; border: 1px solid #828f8f; border-radius: .3rem; padding: .6rem .7rem; min-height: 46px; }
+.market { margin-top: 1rem; }
+.market h3 { scroll-margin: 1rem; }
+.filtered .market h3 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.store-links { display: flex; flex-wrap: wrap; gap: .6rem; }
+.store-links a { display: grid; flex: 1 1 10rem; align-content: center; padding: .65rem 1rem; min-height: 52px; border: 1px solid #233238; border-radius: .35rem; text-decoration: none; background: #182328; color: #fff; font-weight: 650; }
+.store-links a:hover { background: #294046; }
+.store-links a:active { transform: translateY(1px); }
+.store-links small { font-size: .82rem; font-weight: 400; color: #d6e5e6; }
+.checkout { margin: .75rem 0 0; color: #495554; font-size: .9rem; }
+footer { flex-wrap: wrap; padding-block: .7rem 1.5rem; border-top: 1px solid #c8cdca; }
+[hidden] { display: none !important; }
+@media (max-width: 42rem) {
+  .wrap { width: calc(100% - 2.25rem); }
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-inner > div { padding: 1.8rem 0 .3rem; }
+  .hero img { width: min(100%, 27rem); max-height: 12rem; object-fit: cover; object-position: center 20%; justify-self: end; }
+  .download-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+  .downloads { padding-block: 1.7rem; }
+  nav { gap: 1rem; }
+}

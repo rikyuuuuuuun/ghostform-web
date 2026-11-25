@@ -6,6 +6,8 @@ This is a buildless GitHub Pages website. Publishing uses the existing `main` br
 
 ## Files
 
+The English download page lives at `en/index.html`. Each country or region has one section with its two-letter country code, so `en/#TW` opens the Taiwan stores. Add a store link after its country-specific product page shows the app on Apple or an install button on Google. Use the price shown in the App Store listing or in Google Play’s “About this app” panel. If Google omits a public price, keep the in-app price prompt. The selector reads these sections directly, and the same links work without JavaScript.
+
 - `index.html`: product introduction, use cases, first-use instructions, download links, canonical URL and Search Console verification.
 - `support.html` and `privacy.html`: existing support/privacy URLs, retained for the app listing.
 - `store-links.js`: Apple-issued campaign tokens on the explicit Japanese product URL. `?from=x`, `instagram`, `tiktok`, `note`, or `coach` selects a source. Unknown values use the website campaign. Regionless `/app/apple-store/` links reproduced a US not-found page; retain `/jp/app/` in JS, HTML fallbacks and support links.
